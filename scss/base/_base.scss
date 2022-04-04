@@ -1,0 +1,86 @@
+@use "../utils/" as *;
+.container, .divider {
+    @include toRem(max-width, 100%);
+    @include toRem(padding-inline-start, 15);
+    @include toRem(padding-inline-end, 15);
+    margin: auto;
+    @include respond-above(sm) {
+        @include toRem(max-width, 576);
+    }
+    @include respond-above(md) {
+        @include toRem(max-width, 720);
+    }
+    @include respond-above(lg) {
+        @include toRem(max-width, 960);
+    }
+    @include respond-above(xl) {
+        @include toRem(max-width, 1140);
+    }
+    @include respond-above(xxl) {
+        @include toRem(max-width, 1720);
+        padding-inline: 100px;
+    }
+    @media (min-width: 1440px) {
+        max-width: 1720px;
+    }
+}
+.divider {
+    @include toRem(margin-inline, 15);
+    @include respond-above(sm) {
+        margin: auto;
+    }
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.divider {
+    height: 1px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: var(--color-divider);
+        @include toRem(margin-inline, 0);
+    }
+    @include respond-above(xxl) {
+        &::after {
+            @include toRem(margin-inline, 100);
+        }
+    }
+}
+
+@-webkit-keyframes slide-down {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0.9;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0.9;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}

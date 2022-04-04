@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+	<meta name=theme-color content="var(--primary-color)" />
+
+  <title>LO Website</title>
+
+	<!-- <meta property="og:image" content="https://khatrimanoj.github.io/digitaldesign/images/banner_1.jpg"> -->
+	<meta name="twitter:card" content=summary_large_image>
+
+  <link rel="icon" href="images/locklear-ico.svg" type="image/gif" sizes="16x16">
+
+  <!-- preload css -->
+  <link rel="preload" onload="this.rel = 'stylesheet'" as="style" href="assets/css/main.css">
+
+  <noscript>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </noscript>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav role="navigation">
+        <a class="brand-logo" href="#" tabindex="-1" aria-label="brand name" aria-labelledby="Lo website">
+          <img src="images/logo.png" alt="Lo website logo" />
+        </a>
+        <button class="menu-toggle" type="button" data-toggle="collapse" data-target=".meu-collapse"
+          aria-controls="menu-collapse" aria-expanded="false" aria-label="Toggle menu navigation">
+          <span class="menu-toggler-icon"></span>
+        </button>
+        <div class="menu-overlay"></div>
+        <div class="menu-collapse">
+          <ul>
+            <li><a href="#" class="menu-item" tabindex="0">About</a></li>
+            <li><a href="#" class="menu-item">Tools</a></li>
+            <li><a href="#" class="menu-item">Reviews</a></li>
+            <li><a href="#" class="menu-item">Contacts</a></li>
+          </ul>
+          <div class="menu-right">
+            <a href="#" class="menu-item">Client Login</a>
+            <a href="#" class="btn btn-primary"><span>Apply Now</span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======= Banner Section Start ========= -->
+    <section class="banner" style="background: url(images/hero-bg.png) no-repeat;background-size: cover;">
+      <div class="container">
+        <div class="banner__content">
+          <div class="banner__content--item">
+            <h1>Find Your Dream <span>Loan</span></h1>
+            <div class="tab" role="tablist" aria-label="tabbing">
+              <ul class="tab__container">
+                <li role="tab" aria-selected="true" id="buy" tabindex="0">Buy</li>
+                <li role="tab" aria-selected="false" id="refinance" tabindex="0">Refinance</li>
+              </ul>
+            </div>
+            <div class="tab__content">
+              <div class="tab-pane" aria-labelledby="buy" role="tabpanel">
+                <form class="form">
+                  <div class="form__content">
+                    <input type="text" placeholder="Enter ZIP code">
+                    <button type="submit" class="btn btn-primary"><span>Apply Now</span></button>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane" aria-labelledby="refinance" role="tabpanel" hidden>
+                <form class="form">
+                  <div class="form__content">
+                    <input type="text" placeholder="61000">
+                    <button type="submit" class="btn btn-primary"><span>Apply Now</span></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="banner__content--item">
+            <div class="client__info">
+              <div class="client">
+                <div class="avatar">
+                  <img src="images/avatar.png" alt="client avatar" />
+                </div>
+                <div class="avatar">
+                  <img src="images/locklear-ico.svg" alt="client avatar" />
+                </div>
+              </div>
+              <div class="info">
+                <h2>Garrett Locklear</h2>
+                <p><span>Loan Officer |</span> <span>NMLS #820797</span></p>
+                <p><strong>Phone:</strong> <a href="tel:(615) 933-2080"> (615) 933-2080</a></p>
+                <p><strong>Email:</strong> <a href="mailto:garrett@locklearlendingteam.com"> garrett@locklearlendingteam.com</a></p>
+                <ul class="social__icons">
+                  <li>
+                    <a href="#">
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.19307 16.1317H0.913626V5.61649H4.19307V16.1317ZM2.55158 4.18212C1.50292 4.18212 0.652344 3.31728 0.652344 2.27313C0.652344 1.7716 0.852442 1.2906 1.20862 0.935957C1.5648 0.581316 2.04787 0.38208 2.55158 0.38208C3.05529 0.38208 3.53837 0.581316 3.89455 0.935957C4.25073 1.2906 4.45082 1.7716 4.45082 2.27313C4.45082 3.31728 3.59989 4.18212 2.55158 4.18212ZM16.467 16.1317H13.1946V11.013C13.1946 9.79306 13.1699 8.2286 11.4896 8.2286C9.78452 8.2286 9.52323 9.55399 9.52323 10.9251V16.1317H6.24732V5.61649H9.39259V7.05087H9.43849C9.87632 6.2247 10.9458 5.35282 12.5414 5.35282C15.8604 5.35282 16.4705 7.52899 16.4705 10.3556V16.1317H16.467Z" fill="#2D2929"/>
+                      </svg>                        
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.03088 9.75029L9.50357 6.70227H6.54811V4.72431C6.54811 3.89043 6.96097 3.0776 8.28462 3.0776H9.62822V0.482532C9.62822 0.482532 8.40894 0.276611 7.24318 0.276611C4.80928 0.276611 3.21836 1.73648 3.21836 4.37924V6.70227H0.512878V9.75029H3.21836V17.1187H6.54811V9.75029H9.03088Z" fill="#2D2929"/>
+                      </svg>                                               
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.15093 6.2133C6.68196 6.2133 5.48317 7.41211 5.48317 8.88111C5.48317 10.3501 6.68196 11.5489 8.15093 11.5489C9.61989 11.5489 10.8187 10.3501 10.8187 8.88111C10.8187 7.41211 9.61989 6.2133 8.15093 6.2133ZM16.1522 8.88111C16.1522 7.77636 16.1622 6.68162 16.1002 5.57887C16.0381 4.29801 15.7459 3.16124 14.8093 2.22461C13.8707 1.28597 12.7359 0.995776 11.4551 0.933734C10.3504 0.871692 9.25565 0.881699 8.15293 0.881699C7.0482 0.881699 5.95348 0.871692 4.85076 0.933734C3.56992 0.995776 2.43317 1.28797 1.49655 2.22461C0.557937 3.16324 0.267746 4.29801 0.205706 5.57887C0.143665 6.68362 0.153671 7.77836 0.153671 8.88111C0.153671 9.98385 0.143665 11.0806 0.205706 12.1833C0.267746 13.4642 0.559938 14.601 1.49655 15.5376C2.43517 16.4762 3.56992 16.7664 4.85076 16.8285C5.95548 16.8905 7.0502 16.8805 8.15293 16.8805C9.25765 16.8805 10.3524 16.8905 11.4551 16.8285C12.7359 16.7664 13.8727 16.4742 14.8093 15.5376C15.7479 14.599 16.0381 13.4642 16.1002 12.1833C16.1642 11.0806 16.1522 9.98585 16.1522 8.88111ZM8.15093 12.9859C5.87943 12.9859 4.04623 11.1526 4.04623 8.88111C4.04623 6.60957 5.87943 4.77633 8.15093 4.77633C10.4224 4.77633 12.2556 6.60957 12.2556 8.88111C12.2556 11.1526 10.4224 12.9859 8.15093 12.9859ZM12.4237 5.56687C11.8934 5.56687 11.4651 5.13858 11.4651 4.60822C11.4651 4.07786 11.8934 3.64957 12.4237 3.64957C12.9541 3.64957 13.3824 4.07786 13.3824 4.60822C13.3825 4.73415 13.3578 4.85888 13.3097 4.97526C13.2616 5.09164 13.191 5.19739 13.1019 5.28644C13.0129 5.37549 12.9072 5.44609 12.7908 5.49422C12.6744 5.54234 12.5497 5.56702 12.4237 5.56687Z" fill="#2D2929"/>
+                      </svg>                                                                       
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.04667 0.964355C1.59117 0.964355 0.411255 2.28352 0.411255 3.91078V11.7679C0.411255 13.3952 1.59117 14.7144 3.04667 14.7144H15.3453C16.8008 14.7144 17.9807 13.3952 17.9807 11.7679V3.91078C17.9807 2.28352 16.8008 0.964355 15.3453 0.964355H3.04667ZM3.48319 3.0581C3.06194 2.78898 2.52533 2.9526 2.28462 3.42356C2.04391 3.89451 2.19026 4.49446 2.6115 4.76358L8.7608 8.69215C9.03088 8.86469 9.36242 8.86469 9.63249 8.69215L15.7818 4.76358C16.203 4.49446 16.3494 3.89451 16.1087 3.42356C15.868 2.9526 15.3314 2.78898 14.9101 3.0581L9.19665 6.70822L3.48319 3.0581Z" fill="#2D2929"/>
+                      </svg>                                                                                              
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Banner Section End ========= -->
+
+    <!-- ======= Latest News Section Start ========= -->
+    <section class="news">
+      <div class="container">
+        <div class="main__title">OUR<br>
+          LATEST NEWS</div>
+          <div class="news__slider">
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news1.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news2.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news3.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news4.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news1.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news2.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news3.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+            <div class="news__slider--item">
+              <div class="image">
+                <img src="images/news4.jpg" alt="news">
+              </div> <!-- end image -->
+            </div>
+          </div> <!-- end slider -->
+      </div>
+    </section>
+    <div class="divider"></div>
+    <!-- ======= Latest News Section End ========= -->
+
+    <!-- ======= Finance Team Section Start ========= -->
+    <section class="team">
+      <div class="container">
+        <div class="main__title">Your home<br>
+          financing team</div>
+        
+        <div class="team__content">
+          <div class="team__content--item">
+            <div class="team-avatart">
+              <img src="images/team.jpg" alt="team image" />
+            </div>
+          </div>
+          <div class="team__content--item">
+            <div class="contact__details">
+              <h3>The Locklear Lending Team</h3>
+              <div class="contact__details--item">
+                <span>Address</span>
+                <p>12 Cadillac Drive, Suite 180,<br>
+                  Brentwood, TN 37027</p>
+              </div>
+              <div class="contact__details--item">
+                <span>Phone</span>
+                <a href="tel:(615) 933-2080">(615) 933-2080</a>
+              </div>
+              <div class="contact__details--item">
+                <span>Email</span>
+                <a href="mailto:garrett@locklearlendingteam.com">garrett@locklearlendingteam.com</a>
+              </div>
+              <ul class="social__icons">
+                <li>
+                  <a href="#">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.19307 16.1317H0.913626V5.61649H4.19307V16.1317ZM2.55158 4.18212C1.50292 4.18212 0.652344 3.31728 0.652344 2.27313C0.652344 1.7716 0.852442 1.2906 1.20862 0.935957C1.5648 0.581316 2.04787 0.38208 2.55158 0.38208C3.05529 0.38208 3.53837 0.581316 3.89455 0.935957C4.25073 1.2906 4.45082 1.7716 4.45082 2.27313C4.45082 3.31728 3.59989 4.18212 2.55158 4.18212ZM16.467 16.1317H13.1946V11.013C13.1946 9.79306 13.1699 8.2286 11.4896 8.2286C9.78452 8.2286 9.52323 9.55399 9.52323 10.9251V16.1317H6.24732V5.61649H9.39259V7.05087H9.43849C9.87632 6.2247 10.9458 5.35282 12.5414 5.35282C15.8604 5.35282 16.4705 7.52899 16.4705 10.3556V16.1317H16.467Z" fill="#2D2929"/>
+                    </svg>                        
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.03088 9.75029L9.50357 6.70227H6.54811V4.72431C6.54811 3.89043 6.96097 3.0776 8.28462 3.0776H9.62822V0.482532C9.62822 0.482532 8.40894 0.276611 7.24318 0.276611C4.80928 0.276611 3.21836 1.73648 3.21836 4.37924V6.70227H0.512878V9.75029H3.21836V17.1187H6.54811V9.75029H9.03088Z" fill="#2D2929"/>
+                    </svg>                                               
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.15093 6.2133C6.68196 6.2133 5.48317 7.41211 5.48317 8.88111C5.48317 10.3501 6.68196 11.5489 8.15093 11.5489C9.61989 11.5489 10.8187 10.3501 10.8187 8.88111C10.8187 7.41211 9.61989 6.2133 8.15093 6.2133ZM16.1522 8.88111C16.1522 7.77636 16.1622 6.68162 16.1002 5.57887C16.0381 4.29801 15.7459 3.16124 14.8093 2.22461C13.8707 1.28597 12.7359 0.995776 11.4551 0.933734C10.3504 0.871692 9.25565 0.881699 8.15293 0.881699C7.0482 0.881699 5.95348 0.871692 4.85076 0.933734C3.56992 0.995776 2.43317 1.28797 1.49655 2.22461C0.557937 3.16324 0.267746 4.29801 0.205706 5.57887C0.143665 6.68362 0.153671 7.77836 0.153671 8.88111C0.153671 9.98385 0.143665 11.0806 0.205706 12.1833C0.267746 13.4642 0.559938 14.601 1.49655 15.5376C2.43517 16.4762 3.56992 16.7664 4.85076 16.8285C5.95548 16.8905 7.0502 16.8805 8.15293 16.8805C9.25765 16.8805 10.3524 16.8905 11.4551 16.8285C12.7359 16.7664 13.8727 16.4742 14.8093 15.5376C15.7479 14.599 16.0381 13.4642 16.1002 12.1833C16.1642 11.0806 16.1522 9.98585 16.1522 8.88111ZM8.15093 12.9859C5.87943 12.9859 4.04623 11.1526 4.04623 8.88111C4.04623 6.60957 5.87943 4.77633 8.15093 4.77633C10.4224 4.77633 12.2556 6.60957 12.2556 8.88111C12.2556 11.1526 10.4224 12.9859 8.15093 12.9859ZM12.4237 5.56687C11.8934 5.56687 11.4651 5.13858 11.4651 4.60822C11.4651 4.07786 11.8934 3.64957 12.4237 3.64957C12.9541 3.64957 13.3824 4.07786 13.3824 4.60822C13.3825 4.73415 13.3578 4.85888 13.3097 4.97526C13.2616 5.09164 13.191 5.19739 13.1019 5.28644C13.0129 5.37549 12.9072 5.44609 12.7908 5.49422C12.6744 5.54234 12.5497 5.56702 12.4237 5.56687Z" fill="#2D2929"/>
+                    </svg>                                                                       
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.04667 0.964355C1.59117 0.964355 0.411255 2.28352 0.411255 3.91078V11.7679C0.411255 13.3952 1.59117 14.7144 3.04667 14.7144H15.3453C16.8008 14.7144 17.9807 13.3952 17.9807 11.7679V3.91078C17.9807 2.28352 16.8008 0.964355 15.3453 0.964355H3.04667ZM3.48319 3.0581C3.06194 2.78898 2.52533 2.9526 2.28462 3.42356C2.04391 3.89451 2.19026 4.49446 2.6115 4.76358L8.7608 8.69215C9.03088 8.86469 9.36242 8.86469 9.63249 8.69215L15.7818 4.76358C16.203 4.49446 16.3494 3.89451 16.1087 3.42356C15.868 2.9526 15.3314 2.78898 14.9101 3.0581L9.19665 6.70822L3.48319 3.0581Z" fill="#2D2929"/>
+                    </svg>                                                                                              
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Finance Team Section End ========= -->
+
+    <!-- ======= Mortgage Payment Section Start ========= -->
+    <section class="mortgage">
+      <div class="calculate-payment">
+        <div class="container">
+          <div class="main__title">Calculate<br>
+            your monthly<br>
+            mortgage payment</div>
+
+          <div class="mortgage__content">
+            <form class="form">
+              <div class="form__content">
+                <div class="form__content--row">
+                  <div class="row-item">
+                    <div class="form-group">
+                      <label>Home Price</label>
+                      <div class="input-group">
+                        <div class="prefix big">$</div>
+                        <input type="text" placeholder="300,000" class="form-control big">
+                      </div>
+                    </div>
+                    <div class="total-amount form-group">
+                      <label>Estimated Payment</label>
+                      <p class="amount">$ 1,575/mo</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__content--row">
+                  <div class="row-item">
+                    <div class="form-group">
+                      <div class="range-slider">
+                        <input id="range" type="range" step="10" value="200" min="0" max="800">
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+                <div class="form__content--row">
+                  <div class="row-item">
+                    <div class="form-group">
+                      <label>Down Payment</label>
+                      <div class="input-group">
+                        <input type="text" placeholder="60,000" class="form-control">
+                        <div class="postfix with-value">20%</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Interest Rate</label>
+                      <div class="input-group">
+                        <input type="text" placeholder="3.125" class="form-control">
+                        <div class="postfix">%</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row-item">
+                    <div class="form-group">
+                      <label>Loan Term</label>
+                      <select class="form-select">
+                        <option value="">30 years fixed</option>
+                        <option value="">35 years fixed</option>
+                        <option value="">40 years fixed</option>
+                        <option value="">45 years fixed</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="breakdown-payment">
+        <div class="container">
+          <form class="form">
+            <div class="form__content">
+              <div class="form__content--row">
+                <div class="row-item">
+                  <div class="total-amount form-group">
+                    <label>Estimated Payment</label>
+                    <p class="amount">$ 1,575/mo</p>
+                  </div>
+                  <div class="form-group">
+                    <ul class="payment-chart">
+                      <li class="property-tax"></li>
+                      <li class="owner-insurance"></li>
+                      <li class="due-month"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="form__content--row">
+                <div class="row-item">
+                  <div class="form-group property-tax">
+                    <label class="legend">Property Taxes</label>
+                    <div class="input-group">
+                      <div class="prefix">$</div>
+                      <input type="text" class="form-control" placeholder="256">
+                    </div>
+                  </div>
+                  <div class="form-group owner-insurance">
+                    <label class="legend">Homeowners Insurance</label>
+                    <div class="input-group">
+                      <div class="prefix">$</div>
+                      <input type="text" class="form-control" placeholder="132">
+                    </div>
+                  </div>
+                  <div class="form-group due-month">
+                    <label class="legend">HOA Dues/month</label>
+                    <div class="input-group">
+                      <div class="prefix">$</div>
+                      <input type="text" class="form-control" placeholder="132">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Mortgage Payment Section End ========= -->
+    <div class="divider"></div>
+
+    <!-- ======= Client Review Section Start ========= -->
+    <section class="client__review">
+      <div class="container">
+        <div class="title-button">
+          <div class="main__title">WHAT OUR<br>
+            CLIENTS ARE SAYING</div>
+          <div class="button">
+            <a href="#" class="btn btn-primary"><span>Check Out More Reviews</span></a>
+          </div>
+        </div>
+        <div class="client__review__content">
+          <div class="flex-row">
+            <div class="flex-item">
+              <div class="review-card">
+                <div class="rating-time">
+                  <div class="ratings">
+                    <span>5.0</span>
+                    <div class='stars-rating' style="--rating: 5;">
+                      <div class="rating"></div>
+                    </div>
+                  </div>
+                  <span class="time">December 1st, 2021 04:31 AM</span>
+                </div>
+                <div class="reviews">
+                  <p>The Locklear Lending Team was amazing from start to finish! It was able to successfully do a 21 day close which is unheard of at the banks. Always kept me in the loop and clearly communicated what was needed from me and why. </p>
+                </div>
+                <div class="avatar-name">
+                  <div class="avatar">
+                    <img src="images/45.png" alt="client avatar" />
+                  </div>
+                  <div class="name">
+                    <div class="title">Guy Hawkins</div>
+                    <span>Clover - SC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-item">
+              <div class="review-card">
+                <div class="rating-time">
+                  <div class="ratings">
+                    <span>5.0</span>
+                    <div class='stars-rating' style="--rating: 5;">
+                      <div class="rating"></div>
+                    </div>
+                  </div>
+                  <span class="time">November 11th, 2021 01:36 PM</span>
+                </div>
+                <div class="reviews">
+                  <p>Working was Garrett, Jonathan and Kelly was great! Couldn’t have asked for a better team to help us buy our first house.</p>
+                </div>
+                <div class="avatar-name">
+                  <div class="avatar">
+                    <img src="images/35.png" alt="client avatar" />
+                  </div>
+                  <div class="name">
+                    <div class="title">Kristin Watson</div>
+                    <span>Charlotte - NC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-item">
+              <div class="review-card">
+                <div class="rating-time">
+                  <div class="ratings">
+                    <span>5.0</span>
+                    <div class='stars-rating' style="--rating: 5;">
+                      <div class="rating"></div>
+                    </div>
+                  </div>
+                  <span class="time">October 29th, 2021 04:27 PM</span>
+                </div>
+                <div class="reviews">
+                  <p>The Locklear Lending Team was very helpful throughout the whole process. It was able to explain everything in a clear and easy manner.</p>
+                </div>
+                <div class="avatar-name">
+                  <div class="avatar">
+                    <img src="images/45.png" alt="client avatar" />
+                  </div>
+                  <div class="name">
+                    <div class="title">Jane Cooper</div>
+                    <span>Rock Hill - SC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Client Review Section End ========= -->
+    <div class="divider"></div>
+
+    <!-- ======= Contact Form Section Start ========= -->
+    <section class="contact">
+      <div class="container">
+        <div class="contact__content">
+          <div class="flex-row">
+            <div class="flex-item">
+              <div class="top">
+                <div class="main__title">Wondering<br>
+                  how much home<br>
+                  you can afford?</div>
+                  <p>Let’s talk about your next move!</p>
+              </div>
+              <div class="bottom">
+                <div class="client-info">
+                  <div class="client-avatar">
+                    <img src="images/avatar.png" alt="client avatar" />
+                    <img src="images/locklear-ico.svg" alt="client avatar" />
+                  </div>
+                  <div class="name">
+                    <div class="title">Garrett Locklear</div>
+                    <span>Senior Loan Officer</span>
+                    <p>NMLS #820797</p>
+                    <p><strong>Phone:</strong> <a href="tel:(615) 933-2080">(615) 933-2080</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:garrett@locklearlendingteam.com">garrett@locklearlendingteam.com</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-item">
+              <form class="form">
+                <div class="form__content">
+                  <div class="form-group">
+                    <label>First Name <span>*</span></label>
+                    <div class="input-group">
+                      <input type="text" placeholder="First Name" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Last Name <span>*</span></label>
+                    <div class="input-group">
+                      <input type="text" placeholder="Last Name" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Email <span>*</span></label>
+                    <div class="input-group">
+                      <input type="email" placeholder="Email" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Phone <span>*</span></label>
+                    <div class="input-group">
+                      <input type="tel" placeholder="phone" class="form-control">
+                    </div>  
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary"><span>Submit</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======= Contact Form Section End ========= -->
+    <div class="divider"></div>
+
+    <!-- ======= Footer Section Start ========= -->
+    <footer>
+      <div class="container">
+        <div class="flex-row">
+          <div class="flex-item">
+            <div class="logo">
+              <img src="images/logo.png" alt="locklear logo" />
+            </div>
+            <div class="copy-right">
+              <p>© 2022. All rights reserved</p>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="footer-menu">
+              <div class="footer-title">Company</div>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Mortgage Calculator</a></li>
+                <li><a href="#">Reviews</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <div class="footer-title">Legal</div>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li class="footer-icon">
+                  <img src="images/equal-housing-lender.svg" alt="locklear equal housing lender" />
+                  <img src="images/equal-housing-oppportunity.svg" alt="locklear equal housing opportunity" />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="copy-right">
+            <p>© 2022. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>AL-79220, AZ-1031430, CA-DFPI820797, CO-100528407, FL-LO77403, GA-43036, KY-MC425100, MI-820797, NC-I-188291, TN-119068, VA-MLO-22723VA, MD-Temporary Authority, DC-MLO820797 | Movement Mortgage, LLC supports Equal Housing Opportunity. NMLS ID# 39179 (For licensing information, go to: www.nmlsconsumeraccess.org) | 877-314-1499. Movement Mortgage, LLC is licensed by AL # 21022, AZ # 0918544, “CA Department of Business Oversight under the California Residential Mortgage Lending Act” # 4131054, CO # 39179, FL # MLD1360, GA # 23002, KY # MC85066, MI # FR0021343 & SR0020189, NC # L-142670, TN # 112748, VA # MC-5112, MD # 19094, D.C. # MLB39179. Interest rates and products are subject to change without notice and may or may not be available at the time of loan commitment or lock-in. Borrowers must qualify at closing for all benefits. "Movement Mortgage" is a registered trademark of the Movement Mortgage, LLC, a Delaware limited liability company. 8024 Calvin Hall Rd, Indian Land, SC 29707.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ======= Footer Section End ========= -->
+
+  </main>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</body>
+
+</html>

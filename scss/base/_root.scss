@@ -1,0 +1,13 @@
+
+@use "../utils"  as *;
+
+:root{
+    font-family: "InterRegular";
+    @each $colorkey , $colorvalue in $colorScheme{
+        --color-#{$colorkey} :#{$colorvalue};
+    }
+    --grid-width:1400px;
+    --gutter-gap:1.25rem;
+}
+
+

@@ -1,0 +1,183 @@
+@use "../utils" as *;
+
+header {
+    &.fixed-menu {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        -webkit-animation: slide-down 0.7s;
+        animation: slide-down 0.7s;
+        background: var(--color-white);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+    }
+    nav {
+        @include flexContainer(flex, space-between, center);
+        @include toRem(height, 85);
+        .brand-logo {
+            @include toRem(min-width, 175);
+            align-self: center;
+        }
+        .menu-toggle {
+            @include flexContainer(flex, space-between, center);
+            @include toRem(height, 40);
+            span {
+              @include toRem(width, 36);
+              @include toRem(height, 3);
+              background-color: var(--color-black);
+              display: block;
+              position: relative;
+              transition: 0.3s;
+              &:after {
+                content: "";
+                left: 0;
+                @include toRem(width, 36);
+                @include toRem(height, 3);
+                position: absolute;
+                @include toRem(top, 9);
+                background-color: var(--color-black);
+                @include transition(.3s all ease-in-out);
+              }
+              &:before {
+                content: "";
+                left: 0;
+                @include toRem(width, 36);
+                @include toRem(height, 3);
+                position: absolute;
+                @include toRem(bottom, 9);
+                background-color: var(--color-black);
+                @include transition(.3s all ease-in-out);
+              }
+            }
+            &.active ~ .menu-overlay {
+                @include transform(translateX(0));
+            }
+        }
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            @include transform(translateX(-140%));
+            @include transition(transform .3s);
+            background-color:rgba(24, 23, 30, 0.85);
+        }
+        .menu-collapse {
+            @include toRem(width, 300);
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: var(--color-white);
+            @include transform(translateX(-140%));
+            @include transition(transform .3s);
+            @include flexbox();
+            @include flex-direction($value: column);
+            z-index: 9;
+            @include toRem(padding, 15);
+            &.active {
+                @include transform(translateX(0));
+            }
+            .mob-logo {
+                order: 1;
+            }
+            .menu-item {
+                color: var(--color-link);
+                @include toRem(font-size, 16);
+                @include transition(all .3s ease-in-out);
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+            ul {
+                order: 2;
+                @include flexbox();
+                @include flex-direction($value: column);
+                @include toRem(padding-block-start, 15);
+                li {
+                    @include toRem(padding-block, 15);
+                }
+            }
+            .menu-right {
+                order: 3;
+                @include flexbox();
+                @include flex-direction($value: column);
+                @include align-items($value: flex-start);
+                a {
+                    @include toRem(margin-block, 15);
+                    &.btn-primary {
+                        @include toRem(height, 45);
+                    }
+                }
+            }
+        }
+    }
+    @include respond-above(lg) {
+        nav {
+            .menu-toggle {
+                display: none;
+            }
+            .menu-overlay {
+                display: none;
+            }
+            .menu-collapse {
+                height: auto;
+                @include transform(translateX(0));
+                @include flex-direction($value: row);
+                @include align-items($value: center);
+                position: relative;
+                width: 100%;
+                padding: 0;
+                .mob-logo {
+                    display: none;
+                }
+                ul {
+                    @include flex-direction($value: row);
+                    @include align-items($value: center);
+                    @include justify-content($value: center);
+                    @include toRem(gap, 40);
+                    @include toRem(padding-block-start, 0);
+                    flex: 1;
+                }
+                .menu-right {
+                    @include flex-direction($value: row);
+                    @include align-items($value: center);
+                    @include toRem(gap, 35);
+                }
+            }
+        }
+    }
+}
+
+.reviews {
+    header {
+        border-bottom: 1px solid rgba(226,226,226,0.5);
+        nav {
+            height: auto;
+            @include toRem(padding-block, 10);
+            @include toRem(column-gap, 20);
+            .btn {
+                @include toRem(height, 40);
+                @include toRem(padding-inline, 20);
+                white-space: nowrap;
+                &:hover {
+                    span {
+                        svg path {
+                            fill: var(--color-black);
+                        }
+                    }
+                }
+                span {
+                    @include flexbox();
+                    @include align-items($value: center);
+                    @include toRem(gap, 10);
+                    svg path {
+                        @include transition(all .3s ease-in-out);
+                    }
+                }
+            }
+        }
+    }
+}

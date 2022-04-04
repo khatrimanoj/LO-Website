@@ -1,0 +1,62 @@
+// MEDIA QUERY MANAGER
+
+/*
+0px - 360px:		XS Phone
+360px - 576px: 		Phone
+576px - 768px: 		Tablet Portrait
+768px - 992px:		Tablet Landscape
+992px - 1200px: 	desktop
+1200px - 1920px:	normal Media queries
+1920px and up:  	Full HD
+
+
+// 1em = 16px
+
+	 359   =  	22.438em	
+	 576   =  	36em
+	 768   =	48em
+	 992   =	62em
+	 1200  =	75em
+	 1366  =	85.375em
+	 1400  =	87.5em
+	 1537  =	96.063em
+	 1560  =	97.5em
+	 1600  =	100em
+	 1680  =	105em
+	 1920  =	120em
+*/
+
+
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+) !default;
+
+
+$breakpoint: map-get($breakpoints, sm);
+
+
+@mixin respond-above($breakpoint) {
+
+	// If the breakpoint exists in the map.
+	@if map-has-key($breakpoints, $breakpoint) {
+  
+	  // Get the breakpoint value.
+	  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+	  // Write the media query.
+	  @media (min-width: $breakpoint-value) {
+		@content;
+	  }
+  
+	// If the breakpoint doesn't exist in the map.
+	} @else {
+  
+	  // Log a warning.
+	  @warn 'Invalid breakpoint: #{$breakpoint}.';
+	}
+}

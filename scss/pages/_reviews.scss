@@ -1,0 +1,297 @@
+@use "../utils" as *;
+.reviews {
+    position: relative;
+    main {
+        position: relative;
+        @include flexbox();
+        @include flex-direction($value: column);
+        background-color: var(--color-bg-secondary);
+        .main__wrapper {
+            position: relative;
+            @include toRem(padding-block, 25);
+            @include flexbox();
+            @include flex-direction($value: column);
+            @include toRem(gap, 15);
+            @include respond-above(md) {
+                @include flex-direction($value: row);
+            }
+            .sidebar {
+                width: 100%;
+                @include respond-above(md) {
+                    position: sticky;
+                    @include toRem(top, 20);
+                    height: 100%;
+                    @include toRem(max-width, 345);
+                }
+                @include respond-above(lg) {
+                    @include toRem(max-width, 400);
+                }
+                aside {
+                    width: 100%;
+                    position: relative;
+                    .card {
+                        .divider {
+                            padding-inline: 0;
+                            margin-inline: 0;
+                            &::after {
+                                margin-inline: 0;
+                            }
+                        }
+                        .title {
+                            @include toRem(font-size, 20);
+                            @include toRem(font-size, 24.2);
+                            font-family: 'InterMedium';
+                            @include toRem(padding-block, 10);
+                        }
+                        &__header {
+                            @include toRem(padding-block-end, 30);
+                            .banner-avatar {
+                                @include toRem(padding, 15);
+                                .banner {
+                                    position: relative;
+                                    @include toRem(height, 135);
+                                    @include toRem(padding, 0);
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    @include border-radius(22px);
+                                    overflow: hidden;
+                                }
+                                .avatar {
+                                    position: relative;
+                                    z-index: 1;
+                                    background-color: var(--color-white);
+                                    @include toRem(width, 120);
+                                    @include toRem(height, 120);
+                                    @include toRem(border-radius, 120);
+                                    border: 5px solid var(--color-white);
+                                    overflow: hidden;
+                                    @include toRem(margin-inline-start, 20);
+                                    @include toRem(margin-block-start, -80);
+                                }
+                            }
+                            .rating-name {
+                                @include flexbox();
+                                @include flex-direction($value: column);
+                                @include toRem(padding-inline, 20);
+                                @include respond-above(sm) {
+                                    @include toRem(padding-inline, 30);
+                                }
+                                .ratings {
+                                    @include flexbox();
+                                    @include align-items($value: center);
+                                    @include toRem(margin-block-start, 20);
+                                    span {
+                                        @include toRem(font-size, 18);
+                                        @include toRem(line-height, 21.78);
+                                        font-family: 'InterMedium';
+                                        @include toRem(margin-inline-end, 10);
+                                    }
+                                }
+                                .name {
+                                    span {
+                                        background-color: rgba(190,37,48,0.06);
+                                        @include border-radius(2px);
+                                        @include toRem(padding-inline, 10);
+                                        @include toRem(padding-block, 5);
+                                        @include toRem(font-size, 16);
+                                        @include toRem(line-height, 19.36);
+                                        color: var(--color-primary);
+                                    }
+                                }
+                            }
+                        }
+                        &__body {
+                            @include toRem(padding-inline, 20);
+                            @include toRem(padding-block, 20);
+                            @include respond-above(sm) {
+                                @include toRem(padding-inline, 30);
+                            }
+                            p {
+                                @include toRem(font-size, 16);
+                                @include toRem(line-height, 24);
+                                color: #585757;
+                            }
+                            ul {
+                                @include flexbox();
+                                @include flex-direction($value: column);
+                                @include toRem(gap, 10);
+                                @include toRem(margin-block-start, 15);
+                                li {
+                                    @include toRem(font-size, 16);
+                                    @include toRem(line-height, 24);
+                                    color: #585757;
+                                    @include flexbox();
+                                    @include align-items($value: center);
+                                    .icon {
+                                        @include toRem(padding-inline-end, 8);
+                                        @include flexbox();
+                                        @include align-items($value: center);
+                                    }
+                                    a {
+                                        @include flexbox();
+                                        @include align-items($value: center);
+                                        color: var(--color-primary);
+                                        &.link {
+                                            font-family: 'InterMedium';
+                                        }
+                                    }
+                                    p {
+                                        @include flexbox();
+                                        @include align-items($value: flex-start);
+                                        .icon {
+                                            @include toRem(margin-block-start, 4)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &__footer {
+                            @include flexbox();
+                            @include toRem(padding-inline, 20);
+                            @include toRem(padding-block, 20);
+                            @include toRem(gap, 25);
+                            @include respond-above(sm) {
+                                @include toRem(padding-inline, 30);
+                            }
+                            a {
+                                @include toRem(width, 45);
+                                @include toRem(height, 45);
+                                @include toRem(border-radius, 45);
+                                background-color: var(--color-bg-secondary);
+                                @include flexbox();
+                                @include justify-content($value: center);
+                                @include align-items($value: center);
+                                @include transition(all .3s ease-in-out);
+                                &:hover {
+                                    background-color: var(--color-primary);
+                                    svg path {
+                                        fill: var(--color-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content__wrapper {
+                position: relative;
+                @include respond-above(md) {
+                    width: calc(100% - 345px);
+                }
+                @include respond-above(lg) {
+                    width: calc(100% - 400px);
+                }
+                article {
+                    width: 100%;
+                    position: relative;
+                    &:not(:last-child) {
+                        @include toRem(margin-block-end, 15);
+                    }
+                    .card {
+                        @include toRem(padding-inline, 20);
+                        @include toRem(padding-block, 30);
+                        @include toRem(padding-inline, 20);
+                        @include respond-above(sm) {
+                            @include toRem(padding-inline, 35);
+                        }
+                        @include respond-above(md) {
+                            @include toRem(padding-inline, 20);
+                        }
+                        @include respond-above(lg) {
+                            @include toRem(padding-inline, 35);
+                        }
+                        box-shadow: 0 8px 16px -6px rgba(24,39,75,0.08);
+                        .divider {
+                            padding-inline: 0;
+                            margin-inline: 0;
+                            &::after {
+                                margin-inline: 0;
+                            }
+                        }
+                        &__header {
+                            @include flexbox();
+                            .rating-time {
+                                width: 100%;
+                                @include flexbox();
+                                @include flex-wrap($value: wrap);
+                                @include toRem(row-gap, 10);
+                                @include justify-content($value: space-between);
+                                .ratings {
+                                    @include flexbox();
+                                    @include align-items($value: center);
+                                    span {
+                                        @include toRem(font-size, 18);
+                                        font-family: 'InterMedium';
+                                    }
+                                    .stars-rating {
+                                        @include toRem(margin-inline-start, 10);
+                                    }
+                                }
+                            }
+                        }
+                        &__body {
+                            @include toRem(padding-block, 20);
+                            p {
+                                @include toRem(font-size, 16);
+                                @include toRem(line-height, 24.48);
+                                color: var(--color-link);
+                                .link {
+                                    color: var(--color-primary);
+                                    text-decoration: underline;
+                                    @include toRem(margin-inline-start, 5);
+                                }
+                            }
+                        }
+                        &__footer {
+                            position: relative;
+                            @include toRem(padding-block-start, 20);
+                            .avatar-button {
+                                @include flexbox();
+                                @include flex-wrap($value: wrap);
+                                @include toRem(gap, 10);
+                                @include align-items($value: center);
+                                @include justify-content($value: space-between);
+                                .client-info {
+                                    @include flexbox();
+                                    @include align-items($value: center);
+                                    .avatar {
+                                        @include toRem(width, 44);
+                                        @include toRem(height, 44);
+                                        @include toRem(border-radius, 44);
+                                        overflow: hidden;
+                                        @include toRem(margin-inline-end, 13);
+                                        background-color: #3A3E47;
+                                        @include flexbox();
+                                        @include align-items($value: center);
+                                        @include justify-content($value: center);
+                                        span {
+                                            color: var(--color-white);
+                                            @include toRem(font-size, 16);
+                                            @include toRem(line-height, 19.36);
+                                            font-family: 'InterSemiBold';
+                                        }
+                                    }
+                                    .name {
+                                        @include flexbox();
+                                        @include flex-direction($value: column);
+                                        .title {
+                                            @include toRem(font-size, 16);
+                                            @include toRem(line-height, 19.36);
+                                            color: var(--color-link);
+                                            font-family: 'InterMedium';
+                                        }
+                                        span {
+                                            @include toRem(font-size, 15);
+                                            @include toRem(line-height, 18.15);
+                                            color: #585757;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

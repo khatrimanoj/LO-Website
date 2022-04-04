@@ -1,0 +1,49 @@
+@use "../utils/" as *;
+.form-control {
+    @include flexbox();
+    @include align-items($value: center);
+    width: 100%;
+    @include toRem(padding-inline, 10);
+    @include toRem(height, 50);
+    @include toRem(font-size, 16);
+    font-family: 'InterMedium';
+    color: rgba(34, 34, 34, 1);
+    background-color: transparent;
+    &::placeholder {
+        opacity: 0.6;
+    }
+    &.big {
+        @include toRem(height, 70); 
+        @include toRem(font-size, 23);
+    }
+    @include respond-above (sm) {
+        @include toRem(height, 60);
+        @include toRem(font-size, 18);
+        @include toRem(padding-inline, 20);
+        &.big {
+            @include toRem(height, 80); 
+            @include toRem(font-size, 32); 
+            @include toRem(padding-inline, 20); 
+        }
+    }
+}
+
+.form-select {
+    background: var(--color-white) url(../../images/down-arrow.svg) no-repeat;
+    background-position: right 20px center;
+    @include flexbox();
+    @include align-items($value: center);
+    width: 100%;
+    @include toRem(padding-inline, 20);
+    @include toRem(height, 60);
+    @include toRem(font-size, 16);
+    font-family: 'InterMedium';
+    color: rgba(34, 34, 34, 1);
+    @include border-radius(12px);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    appearance: none;
+    @include respond-above (sm) {
+        @include toRem(height, 60);
+        @include toRem(font-size, 18);
+    }
+}

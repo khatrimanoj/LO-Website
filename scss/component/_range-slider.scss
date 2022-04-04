@@ -1,0 +1,57 @@
+@use "../utils/" as *;
+.range-slider {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+    @include toRem(margin-block-start, 40);
+    @include toRem(margin-block-end, 32);
+}
+#range {
+	-webkit-appearance: none;
+	width: 100%;
+	&:focus {
+		outline: none;
+	}
+	// &::before {
+	// 	position: absolute;
+	// 	top: 2rem;
+	// 	color: #333;
+	// 	font-size: 14px;
+	// 	line-height: 1;
+	// 	padding: 3px 5px;
+	// 	background-color: rgba(0,0,0,.1);
+	// 	border-radius: 4px;
+	// 	left: 0;
+	// 	content: attr(data-min);
+	// }
+	// &::after {
+	// 	position: absolute;
+	// 	top: 2rem;
+	// 	color: #333;
+	// 	font-size: 14px;
+	// 	line-height: 1;
+	// 	padding: 3px 5px;
+	// 	background-color: rgba(0,0,0,.1);
+	// 	border-radius: 4px;
+	// 	right: 0;
+	// 	content: attr(data-max);
+	// }
+	&::-webkit-slider-runnable-track {
+		width: 100%;
+		@include toRem(height, 9);
+		cursor: pointer;
+		background: linear-gradient(90deg, rgba(32, 36, 46, 1) var(--range-progress), rgba(237, 237, 237, 1) var(--range-progress));
+		@include toRem(border-radius, 2);
+	}
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		border: 8px solid var(--color-white);
+        @include border-radius(50%);
+		background: var(--color-link);
+        box-shadow: 0px 5.97659px 14.9415px rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+		@include toRem(width, 30);
+        @include toRem(height, 30);
+		transform: translateY(calc(-50% + 4px));
+	}
+}

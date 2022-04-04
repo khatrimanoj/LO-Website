@@ -1,0 +1,75 @@
+@use "../utils/" as *; 
+
+.page-banner {
+    width: 100%;;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    &-content {
+        @include toRem(padding-block, 80);
+        h1 {
+            @include toRem(font-size, 40);
+            @include toRem(line-height, 46.8);
+            color: rgba(0, 0, 0, 1);
+            text-transform: uppercase;
+            font-family: 'InterSemiBold';
+        }
+        p {
+            @include toRem(font-size, 16);
+            @include toRem(line-height, 20);
+            font-family: 'InterRegular';
+            color: var(--color-primary);
+        }
+        @include respond-above(sm) {
+            background-position: center top -40px;
+            @include toRem(padding-block, 120);
+            h1 {
+                @include toRem(font-size, 60);
+                @include toRem(line-height, 70.2);
+            }
+            p {
+                @include toRem(font-size, 20);
+                @include toRem(line-height, 25);
+            }
+        }
+    }
+}
+
+.inner-page {
+    width: 100%;
+    position: relative;
+    @include toRem(padding-block, 50);
+    p {
+        @include toRem(font-size, 16);
+        @include toRem(line-height, 24);
+        color: #252C32;
+        font-family: 'InterRegular';
+        @include toRem(margin-block-end, 30);
+        &:last-child {
+            @include toRem(margin-block-end, 0);
+        }
+        a {
+            color: var(--color-primary);
+            font-family: 'InterBold';
+        }
+    }
+    strong {
+        font-family: 'InterSemiBold';
+    }
+    .title {
+        @include toRem(font-size, 18);
+        @include toRem(line-height, 20.4);
+        font-family: 'InterBold';
+        color: #252530;
+        @include toRem(margin-block-end, 15);
+    }
+    @include respond-above(sm) {
+        @include toRem(font-size, 18);
+        @include toRem(line-height, 27);
+        .title {
+            @include toRem(font-size, 22);
+            @include toRem(line-height, 24.93);
+        }
+    }
+}

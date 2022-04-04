@@ -1,0 +1,117 @@
+@use "../utils" as *;
+.form {
+    position: relative;
+    font-family: 'InterRegular';
+    &__content {
+        position: relative;
+        @include toRem(row-gap, 50);
+        .form-group {
+            @include flexbox();
+            @include flex-direction($value: column);
+            label {
+                font-family: 'InterRegular';
+                @include toRem(font-size, 16);
+                @include toRem(line-height, 20);
+                color: rgba(34, 34, 34, 1);
+                @include toRem(margin-block-end, 10);
+                @include respond-above(sm) {
+                    @include toRem(font-size, 18);
+                    @include toRem(line-height, 22);
+                }
+                span {
+                    color: var(--color-primary);
+                }
+            }
+            .input-group {
+                background-color: var(--color-white);
+                @include flexbox();
+                @include align-items($value: center);
+                border: 1px solid rgba(0, 0, 0, 0.4);
+                @include border-radius(12px);
+                .prefix {
+                    @include toRem(padding-inline-start, 24);
+                    @include toRem(font-size, 18);
+                    color:rgba(34, 34, 34, 0.6);
+                    &.big {
+                        @include toRem(font-size, 32);
+                    }
+                }
+                .postfix {
+                    font-family: 'InterMedium';
+                    @include toRem(font-size, 18);
+                    color: rgba(34, 34, 34, 1);
+                    @include toRem(padding-inline-end, 20);
+                    &.with-value {
+                        border-left: 1px solid rgba(204, 204, 204, 1);
+                        @include toRem(padding-inline, 20);
+                    }
+                }
+            }
+        }
+        &--row {
+            @include flexbox();
+            @include toRem(column-gap, 20);
+            @include toRem(row-gap, 20);
+            @include flex-direction($value: column);
+            @include respond-above(sm) {
+                @include toRem(column-gap, 40);
+                @include flex-direction($value: row);
+            }
+            &:last-child {
+                @include flex-direction($value: column);
+                .row-item {
+                    @include flex-direction($value: row);
+                }
+            }
+            @include respond-above (lg) {
+                &:last-child {
+                    @include flex-direction($value: row);
+                }
+            }
+            .row-item {
+                flex: 1;
+                @include flexbox();
+                @include toRem(column-gap, 20);
+                &:not(:first-child) {
+                    flex: 1;
+                }
+                .form-group {
+                    flex: 1;
+                    &.total-amount {
+                        p.amount {
+                            @include flexbox();
+                            @include align-items($value: center);
+                            font-family: 'InterMedium';
+                            @include toRem(font-size, 23);
+                            @include toRem(line-height, 28);
+                            @include toRem(height, 70);
+                            @include respond-above (sm) {
+                                @include toRem(font-size, 32);
+                                @include toRem(line-height, 38);
+                                @include toRem(height, 80);
+                            }
+                        }
+                    }
+                }
+                @include respond-above(lg) {
+                    flex: 2;
+                    @include toRem(column-gap, 40);
+                    &:not(:first-child) {
+                        flex: 1;
+                        @media(max-width: 480px) {
+                            @include toRem(row-gap, 20);
+                            @include flex-direction($value: column);
+                        }
+                    }
+                    .form-group {
+                        flex: auto;
+                    }
+                }
+                @media(max-width: 411px) {
+                    @include toRem(row-gap, 20);
+                    @include flex-direction($value: column);
+                }
+            }
+        }
+    }
+}

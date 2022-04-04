@@ -1,0 +1,11 @@
+@use "../utils" as *;
+.card {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    @include border-radius(22px);
+    box-shadow: 0 8px 8px 16px -6px rgba(24,39,75,0.08);
+    &__header, &__body, &__footer {
+        position: relative;
+    }
+}

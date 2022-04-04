@@ -1,0 +1,816 @@
+@use "../utils/" as *;
+section {
+    &:not(:first-child) {
+        @include toRem(padding-block, 50);
+        @include respond-above(sm) {
+            @include toRem(padding-block, 70);
+        }
+        @include respond-above(lg) {
+            @include toRem(padding-block, 100);
+        }
+        @include respond-above(xl) {
+            @include toRem(padding-block, 120);
+        }
+        @include respond-above(xxl) {
+            @include toRem(padding-block, 150);
+        }
+    }
+    .main__title {
+        @include toRem(font-size, 40);
+        @include toRem(line-height, 50.2);
+        text-transform: uppercase;
+        font-family: 'InterSemiBold';
+        @include toRem(margin-block-end, 37);
+        @include respond-above(lg) {
+            @include toRem(font-size, 50);
+            @include toRem(line-height, 60.2);
+        }
+        @include respond-above(xl) {
+            @include toRem(font-size, 60);
+            @include toRem(line-height, 70.2);
+        }
+    }
+}
+
+//banner section css
+.banner {
+    position: relative;
+    @include toRem(padding-block, 50);
+    @include respond-above(lg) {
+        @include toRem(padding-block, 100);
+    }
+    @include respond-above(xxl) {
+        @include toRem(padding-block, 150);
+    }
+    &__content {
+        @include flexbox();
+        @include align-items($value: flex-start);
+        @include flex-wrap($value: wrap);
+        @include flex-direction($value: column);
+        @include toRem(gap, 30);
+        @include respond-above(lg) {
+            @include flex-direction($value: row);
+            @include flex-wrap($value: nowrap);
+            @include align-items($value: flex-end);
+        }
+        @include respond-above (xxl) {
+            @include toRem(gap, 80);
+        }
+        position: relative;
+        &--item {
+            flex: 1;
+            @include align-items($value: center);
+            width: 100%;
+            @include respond-above(lg) {
+                @include align-items($value: flex-start);
+                width: auto;
+            }
+            h1 {
+                @include toRem(font-size, 40);
+                @include toRem(line-height, 46.8);
+                @include toRem(max-width, 350);
+                color: var(--color-black);
+                font-family: 'InterBold';
+                text-transform: uppercase;
+                span {
+                    color: var(--color-primary);
+                    font-family: 'InterSemiBold';
+                }
+                @include respond-above(sm) {
+                    @include toRem(max-width, 400);
+                    @include toRem(font-size, 60);
+                    @include toRem(line-height, 70);
+                }
+            }
+            .tab {
+                @include toRem(margin-block-start, 42);
+            }
+            .tab__content {
+                position: relative;
+                .form {
+                    width: 100%;
+                    position: relative;
+                    &__content {
+                        width: 100%;
+                        @include flexbox();
+                        input {
+                            background-color: #F4F4F4;
+                            border: 1px solid rgba(0,0,0, 0.2);
+                            @include border-radius(8px 0 0 8px);
+                            @include toRem(padding-inline, 20);
+                            @include toRem(height, 50);
+                            flex: 1;
+                            width: 100%;
+                            color: #262A31;
+                            &::placeholder {
+                                color: var(--color-link);
+                                opacity: 0.6;
+                            }
+                            &:focus {
+                                border-color: var(--color-link);
+                            }
+                        }
+                        .btn-primary {
+                            @include border-radius(0 8px 8px 0);
+                            white-space: nowrap;
+                            &::before {
+                                @include border-radius(0 8px 8px 0);
+                            }&::after {
+                                @include border-radius(0 8px 8px 0);
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            @include flex-direction($value: column);
+                            @include flex-wrap($value: wrap);
+                            @include justify-content($value: center);
+                            @include toRem(gap, 15);
+                            input {
+                                flex: auto;
+                                width: auto;
+                                @include toRem(height, 45);
+                                @include border-radius(8px);
+                            }
+                            .btn-primary {
+                                flex: auto;
+                                @include toRem(height, 45);
+                                @include border-radius(8px);
+                            }
+                        }
+                    }
+                }
+            }
+            .client__info {
+                position: relative;
+                @include flexbox();
+                @include align-items($value: flex-start);
+                @include flex-direction($value: column);
+                @include justify-content($value: center);
+                @include toRem(gap, 20);
+                @include respond-above(xl) {
+                    @include flex-direction($value: row);
+                    @include justify-content($value: flex-end);
+                    @include toRem(gap, 40);
+                }
+                .client {
+                    @include flexbox();
+                    @include toRem(max-width, 275);
+                    .avatar {
+                        @include toRem(max-width, 100);
+                        @include toRem(max-height, 100);
+                        @include respond-above (sm) {
+                            @include toRem(max-width, 125);
+                            @include toRem(max-height, 125);  
+                        }
+                        @include respond-above (lg) {
+                            @include toRem(max-width, 145);
+                            @include toRem(max-height, 145);  
+                        }
+                        @include respond-above (xxl) {
+                            @include toRem(max-width, 174);
+                            @include toRem(max-height, 174);  
+                        }
+                        z-index: 2;
+                        &:not(:first-child) {
+                            margin-inline-start: -25%;
+                            z-index: 1;
+                        }
+                    }
+                }
+                .info {
+                    @include flexbox();
+                    @include flex-direction($value: column);
+                    h2 {
+                        @include toRem(font-size, 25.6);
+                        @include toRem(line-height, 30.98);
+                        color: var(--color-black);
+                    }
+                    p {
+                        @include toRem(font-size, 16.46);
+                        @include toRem(line-height, 27.57);
+                        @include respond-above(sm) {
+                            white-space: nowrap;
+                        }
+                        strong {
+                            font-family: 'InterSemiBold';
+                            color: #222222;
+                        }
+                        span {
+                            color: #222222;
+                            opacity: 0.7;
+                        }
+                        a {
+                            color: #222222;
+                            text-decoration: underline;
+                            font-family: 'InterRegular';
+                        }
+                    }
+                    .social__icons {
+                        @include flexbox();
+                        @include toRem(gap, 30);
+                        @include toRem(margin-block-start, 10);
+                        li {
+                            @include flexbox();
+                            @include justify-content($value: center);
+                            a {
+                                background-color: var(--color-white);
+                                @include flexbox();
+                                @include toRem(width, 45);
+                                @include toRem(height, 45);
+                                @include border-radius(45px);
+                                @include justify-content($value: center);
+                                @include align-items($value: center);
+                                @include transition(all .3s ease-in-out);
+                                &:hover {
+                                    background-color: var(--color-primary);
+                                    svg path {
+                                        fill: var(--color-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//team section css
+.team {
+    position: relative;
+    padding-block-end: 0 !important;
+    &__content {
+        position: relative;
+        width: 100%;
+        @include flexbox();
+        @include flex-direction($value: column);
+        @include toRem(gap, 15);
+        @include respond-above(lg) {
+            @include toRem(gap, 30);
+            @include flex-direction($value: row);
+        }
+        @include respond-above(xl) {
+            @include toRem(gap, 45);
+        }
+        @include respond-above(xxl) {
+            @include toRem(gap, 70);
+        }
+        &--item {
+            flex: auto;
+            .contact__details {
+                background: linear-gradient(121.66deg, rgba(34, 34, 34, 0.9) 3.96%, rgba(14, 7, 7, 0.9) 104.44%);
+                color: var(--color-white);
+                @include flexbox();
+                @include flex-direction($value: column);
+                @include toRem(row-gap, 25);
+                @include toRem(padding-inline, 20);
+                @include toRem(padding-block, 40);
+                font-family: 'InterMedium';
+                @include toRem(font-size, 16);
+                @include toRem(line-height, 18.72);
+                white-space: normal;
+                @include respond-above (sm) {
+                    white-space: nowrap;
+                    @include toRem(font-size, 20);
+                    @include toRem(line-height, 23.4);
+                }
+                @include respond-above(lg) {
+                    @include toRem(max-width, 642);
+                    @include toRem(padding-inline, 50);
+                    @include toRem(padding-block, 45);
+                }
+                @include respond-above(xl) {
+                    @include toRem(padding-inline, 60);
+                    @include toRem(padding-block, 55);
+                }
+                @include respond-above(xxl) {
+                    @include toRem(padding-inline, 70);
+                    @include toRem(padding-block, 65);
+                }
+                h3 {
+                    white-space: pre-wrap;
+                    @include toRem(font-size, 20);
+                    @include toRem(line-height, 23.04);
+                    @include respond-above (sm) {
+                        white-space: nowrap;
+                        @include toRem(font-size, 28);
+                        @include toRem(line-height, 32.76);
+                    }
+                }
+                span {
+                    color: rgba(255, 255, 255, 0.8);
+                    @include toRem(margin-block-end, 7);
+                }
+                a {
+                    color: var(--color-white);
+                    text-decoration: underline;
+                }
+                &--item {
+                    @include flexbox();
+                    @include flex-direction($value: column);
+                    word-break: break-all;
+                }
+                .social__icons {
+                    @include flexbox();
+                    @include toRem(gap, 15);
+                    @include toRem(margin-block-start, 10);
+                    @include respond-above (sm) {
+                        @include toRem(gap, 25);
+                    }
+                    li {
+                        @include flexbox();
+                        @include justify-content($value: center);
+                        a {
+                            background-color: var(--color-white);
+                            @include flexbox();
+                            @include toRem(width, 45);
+                            @include toRem(height, 45);
+                            @include border-radius(45px);
+                            @include justify-content($value: center);
+                            @include align-items($value: center);
+                            @include transition(all .3s ease-in-out);
+                            &:hover {
+                                background-color: var(--color-primary);
+                                svg path {
+                                    fill: var(--color-white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//mortgage section css
+.mortgage {
+    position: relative;
+    .calculate-payment {
+        background: linear-gradient(18.54deg, rgba(202, 204, 209, 0.1) -30.79%, rgba(243, 244, 247, 0.1) 86.08%), #F9F9F9;
+        @include toRem(padding-block-start,70);
+        @include toRem(padding-block-end,40);
+        @include respond-above(sm) {
+            @include toRem(padding-block-start,85);
+            @include toRem(padding-block-end,50);
+        }
+        @include respond-above(lg) {
+            @include toRem(padding-block-start,120);
+            @include toRem(padding-block-end,60);
+        }
+        @include respond-above(xl) {
+            @include toRem(padding-block-start,135);
+            @include toRem(padding-block-end,70);
+        }
+    }
+    .breakdown-payment {
+        @include toRem(margin-block-start, 65);
+        .form {
+            &__content {
+                @include flexbox();
+                @include flex-direction($value: column);
+                @include toRem(row-gap, 20);
+                &--row {
+                    &:not(:last-child) {
+                        .row-item {
+                            @include flex-direction($value: column);
+                        }
+                    }
+                    .row-item {
+                        @include flex-direction($value: column);
+                        @include toRem(row-gap, 20);
+                    }
+                }
+            }
+            @include respond-above(md) {
+                &__content {
+                    @include flexbox();
+                    @include toRem(row-gap, 20);
+                    &--row {
+                        &:not(:last-child) {
+                            .row-item {
+                                @include flex-direction($value: column);
+                            }
+                        }
+                        .row-item {
+                            @include flex-direction($value: row);
+                        }
+                    }
+                } 
+            }
+            @include respond-above (lg) {
+                &__content {
+                    @include flexbox();
+                    @include flex-direction($value: row);
+                    @include toRem(gap, 40);
+                    &--row {
+                        @include flexbox();
+                        flex: 2;
+                        &:not(:first-child) {
+                            flex: 1;
+                            .form-group {
+                                @include flexbox();
+                                @include justify-content($value: space-between);
+                                @include flex-direction($value: row);
+                                @include align-items($value: center);
+                            }
+                        }
+                        .row-item {
+                            @include flex-direction($value: column);
+                            @include toRem(row-gap, 16);
+                            .form-group {
+                                .legend {
+                                    color: rgba(0, 0, 0, 1);
+                                    font-family: 'InterRegular';
+                                    position: relative;
+                                    @include toRem(padding-inline-start, 20);
+                                    width: 50%;
+                                    @include toRem(padding-inline-end, 20);
+                                    @include toRem(margin-block-end, 0);
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        bottom: 0;
+                                        margin: auto;
+                                        @include toRem(width, 7.5);
+                                        @include toRem(height, 33);
+                                        @include toRem(border-radius, 3);
+                                    }
+                                }
+                                &.property-tax {
+                                    .legend {
+                                        &::before {
+                                            background-color: rgba(229, 54, 66, 1);
+                                        }
+                                    }
+                                }
+                                &.owner-insurance {
+                                    .legend {
+                                        &::before {
+                                            background-color: rgba(245, 106, 116, 1);
+                                        }
+                                    }
+                                }
+                                &.due-month {
+                                    .legend {
+                                        &::before {
+                                            background-color: rgba(167, 26, 36, 1);
+                                        }
+                                    }
+                                }
+                                .input-group {
+                                    width: 50%;
+                                    @include toRem(margin-inline-start, 20);
+                                    input {
+                                        @include toRem(padding-inline, 10);
+                                        border: none;
+                                    }
+                                }
+                                @media(min-width: 1440px) {
+                                    .legend, .input-group {
+                                        width: auto;
+                                        flex-basis: 60%;
+                                    }
+                                    .input-group {
+                                        input {
+                                            @include toRem(padding-inline, 10);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .payment-chart {
+            @include flexbox();
+            @include align-items($value: center);
+            width: 100%;
+            li {
+                flex: auto;
+                @include toRem(height, 60);
+                @include toRem(border-radius, 60);
+                &.property-tax {
+                    background-color: rgba(229, 54, 66, 1);
+                }
+                &.owner-insurance {
+                    background-color: rgba(245, 106, 116, 1);
+                }
+                &.due-month {
+                    background-color: rgba(167, 26, 36, 1);
+                }
+            }
+        }
+    }
+}
+
+//client review css
+.client__review {
+    position: relative;
+    .title-button {
+        @include flexbox();
+        @include justify-content($value: space-between);
+        @include align-items($value: flex-end);
+        @include toRem(margin-block-end, 40);
+        @include toRem(gap, 30);
+        @include flex-wrap($value: wrap);
+        .main__title {
+            @include toRem(margin-block-end, 0);
+        }
+        .button {
+            flex: 1;
+            @include flexbox();
+            @include justify-content($value: flex-start);
+            .btn-primary {
+                @include toRem(max-width, 550);
+                width: 100%;
+                white-space: nowrap;
+            }
+        }
+        @include respond-above (lg) {
+            @include flex-wrap($value: nowrap);
+            .button {
+                @include justify-content($value: flex-end);
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        .flex-row {
+            @include flexbox();
+            @include toRem(gap, 20);
+            @include flex-wrap($value: wrap);
+            @include justify-content($value: flex-start);
+            .flex-item {
+                max-width: 100%;
+            }
+            @include respond-above(md) {
+                .flex-item {
+                    max-width: 48.55%;
+                }
+            }
+            @include respond-above(lg) {
+                .flex-item {
+                    @include flex-wrap(nowrap);
+                    flex: 1;
+                    max-width: 32%;
+                }
+            }
+            @include respond-above(xl) {
+                @include toRem(gap, 35);
+            }
+        }
+        .review-card {
+            background-color: rgba(248, 248, 249, 1);
+            font-family: 'InterRegular';
+            @include toRem(border-radius, 22);
+            @include toRem(padding, 25);
+            height: 100%;
+            @include flexbox();
+            @include flex-direction($value: column);
+            @include toRem(gap, 30);
+            @include respond-above(md) {
+                @include toRem(padding, 30);
+            }
+            @include respond-above(xl) {
+                @include toRem(padding, 35);
+            }
+            .rating-time {
+                @include flexbox();
+                @include flex-direction($value: column);
+                .ratings {
+                    @extend .rating-time;
+                    @include flex-direction($value: row);
+                    @include toRem(column-gap, 10);
+                    span {
+                        @include toRem(font-size, 20);
+                        @include toRem(line-height, 24.02);
+                        font-family: 'InterMedium';
+                        @include respond-above(sm) {
+                            @include toRem(font-size, 21.55);
+                            @include toRem(line-height, 26.08);
+                        }
+                    }
+                }
+                .time {
+                    @include toRem(margin-block-start, 10);
+                    @include toRem(font-size, 16);
+                    @include toRem(line-height, 20);
+                    color: rgba(88, 87, 87, 1);
+                    @include respond-above(xl) {
+                        @include toRem(font-size, 18);
+                        @include toRem(line-height, 22);
+                    }
+                }
+            }
+            .reviews {
+                @include flexbox();
+                p {
+                    @include toRem(font-size, 16);
+                    @include toRem(line-height, 26);
+                    color: rgba(14, 14, 15, 1);
+                    @include respond-above(xl) {
+                        @include toRem(font-size, 20);
+                        @include toRem(line-height, 30);
+                    }
+                }
+                @media(max-width: 767px) {
+                    min-height: auto !important;
+                }
+            }
+            .avatar-name {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                @include toRem(padding-block-start, 20);
+                @include flexbox();
+                @include align-items($value: center);
+                @include toRem(gap, 20);
+                .name {
+                    .title {
+                        @include toRem(font-size, 18);
+                        @include toRem(line-height, 21.78);
+                        color: rgba(14, 14, 15, 1);
+                        font-family: 'InterSemiBold';
+                        @include respond-above(xl) {
+                            @include toRem(font-size, 22);
+                            @include toRem(line-height, 26.63);
+                            @include toRem(margin-block-end, 5);
+                        }
+                    }
+                    span {
+                        @include toRem(font-size,  16);
+                        @include toRem(line-height, 19.36);
+                        color: rgba(88, 87, 87, 1);
+                        @include respond-above(xl) {
+                            @include toRem(font-size, 20);
+                            @include toRem(line-height, 24.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//contact section css
+.contact {
+    position: relative;
+    &__content {
+        position: relative;
+        width: 100%;
+        font-family: 'InterRegular';
+        .flex-row {
+            position: relative;
+            @include flexbox();
+            @include toRem(gap, 40);
+            @include flex-direction($value: column);
+            .flex-item {
+                flex: 1;
+                @include flexbox();
+                @include flex-direction($value: column);
+                @include justify-content($value: space-between);
+                &:not(:first-child) {
+                    flex: 1;
+                    background: transparent;
+                }
+                @include respond-above(lg) {
+                    background: url(../../images/bg-arrow.svg) no-repeat;
+                    background-position: right 0 bottom;
+                    background-size: 20%;
+                }
+                @include respond-above (xl) {
+                    flex: 2;
+                    background-size: unset;
+                    &:not(:first-child) {
+                        flex: 1;
+                    }
+                }
+                .top {
+                    .main__title {
+                        @include toRem(margin-block-end, 15);
+                        @include respond-above(lg) {
+                            @include toRem(font-size, 40);
+                            @include toRem(line-height, 50.2);
+                        }
+                        @include respond-above(xl) {
+                            @include toRem(font-size, 60);
+                            @include toRem(line-height, 70.2);
+                        }
+                    }
+                    p {
+                        @include toRem(font-size, 20);
+                        @include toRem(line-height, 25);
+                        color: rgba(48, 48, 48, 1);
+                    }
+                }
+                .client-info {
+                    @include flexbox();
+                    @include flex-direction($value: column);
+                    @include toRem(row-gap, 20);
+                    @include toRem(margin-block-start, 20);
+                    @include respond-above (xl) {
+                        @include toRem(margin-block-start, 0);
+                        @include flex-direction($value: row); 
+                    }
+                    @include respond-above (xxl) {
+                        @include toRem(gap, 30); 
+                    }
+                    .client-avatar {
+                        @include flexbox();
+                        @include toRem(max-width, 224);
+                        @include toRem(margin-inline-end, 30);
+                        @include respond-above (sm) {
+                            @include toRem(max-width, 170);  
+                        }
+                        @include respond-above (lg) {
+                            @include toRem(max-width, 200);  
+                        }
+                        @include respond-above (xxl) {
+                            @include toRem(max-width, 224);  
+                        }
+                        img {
+                            width: 100%;
+                            @include respond-above (sm) {
+                                @include toRem(max-width, 125);
+                                @include toRem(max-height, 125);  
+                            }
+                            @include respond-above (lg) {
+                                @include toRem(max-width, 145);
+                                @include toRem(max-height, 145);  
+                            }
+                            @include respond-above (xxl) {
+                                @include toRem(max-width, 174);
+                                @include toRem(max-height, 174);  
+                            }
+                            &:not(:first-child) {
+                                margin-left: -40%;
+                                z-index: -1;
+                            }
+                        }
+                    }
+                }
+                .name {
+                    @include flexbox();
+                    @include flex-direction($value: column);
+                    .title {
+                        @include toRem(font-size, 28);
+                        @include toRem(line-height, 33.89);
+                        color: rgba(48, 48, 48, 1);
+                        font-family: 'InterSemiBold';
+                        @include toRem(margin-block-end, 5);
+                    }
+                    span {
+                        @include toRem(font-size, 18);
+                        @include toRem(line-height, 21.78);
+                        color: rgba(34, 34, 34, 1);
+                        opacity: 0.7;
+                        @include toRem(margin-block-end, 15);
+                    }
+                    p {
+                        @include toRem(font-size, 18);
+                        @include toRem(line-height, 30.15);
+                        color: rgba(34, 34, 34, 1);
+                        strong {
+                            font-family: 'InterSemiBold';
+                        }
+                        a {
+                            color: rgba(34, 34, 34, 1);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            @include respond-above(lg) {
+                @include flex-direction($value: row);
+            }
+            .form {
+                &__content {
+                    @include flexbox();
+                    @include flex-direction($value: column);
+                    @include toRem(gap, 15);
+                    @include respond-above(md) {
+                        @include toRem(gap, 30);
+                    }
+                    .form-group {
+                        .form-control {
+                            @include toRem(padding-inline, 15);
+                            @include respond-above (sm) {
+                                @include toRem(padding-inline, 20);
+                            }
+                        }
+                        .btn {
+                            @include toRem(margin-block-start, 10);
+                            @include toRem(height, 52);
+                        }
+                    }
+                }
+            }
+            @media(min-width: 1500px) {
+                @include toRem(gap, 100);
+            }
+        }
+    }
+}

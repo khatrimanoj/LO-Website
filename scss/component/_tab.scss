@@ -1,0 +1,46 @@
+@use "../utils/" as *;
+
+.tab {
+    position: relative;
+    &__container {
+        @include flexContainer(row, flex-start, center);
+        li {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            position: relative;
+            cursor: pointer;
+            @include toRem(font-size, 16);
+            @include toRem(line-height, 20);
+            @include toRem(padding-inline, 24);
+            @include toRem(padding-block, 15);
+            @include border-radius(12px 12px 0 0);
+            font-family: 'InterMedium';
+            @include transition(all .3s ease-in-out);
+            &[aria-selected="true"] {
+                background-color:var(--color-white);
+                color: var(--color-black);
+                font-family: 'InterSemiBold';
+            }
+            @include respond-above (sm) {
+                @include toRem(font-size, 20);
+                @include toRem(line-height, 25);
+                @include toRem(padding-inline, 35);
+                @include toRem(padding-block, 15);
+            }
+        }
+    }
+}
+
+.tab__content {
+    width: 100%;
+    position: relative;
+    .tab-pane {
+        width: 100%;
+        @include toRem(padding, 15);
+        @include border-radius(0 12px 12px 12px);
+        background-color: var(--color-white);
+        @include respond-above(sm) {
+            @include toRem(padding, 35);
+        }
+    }
+}

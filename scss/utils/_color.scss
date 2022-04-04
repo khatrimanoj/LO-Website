@@ -1,0 +1,24 @@
+@use "variable" as *;
+
+// scss-docs-start theme-colors-map
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "black": $black,
+    "white": $white,
+    "link": $link-color,
+    "smoke": $smoke,
+    "divider": $divider,
+    "bg-secondary": $bg-secondary,
+) !default;
+
+$colors-Shade: (
+    "primary-100": $primary,
+) !default;
+
+$darkMode-shade: (
+    "black": $black,
+) !default;
+
+$colorScheme: map-merge($colors, $colors-Shade);
+

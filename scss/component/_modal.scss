@@ -1,0 +1,175 @@
+@use "../utils" as *;
+
+[data-modal="data-ml-modal"] {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow-x:hidden;
+	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+	z-index:9;
+	width:0;
+	height:0;
+	opacity:0;
+    @include flexbox();
+    @include justify-content($value: center);
+    @include align-items($value: center);
+    &:target, &.active {
+        width:auto;
+        height:auto;
+        opacity:1;
+        -webkit-transition:  opacity .2s ease;
+        transition: opacity .2s ease;
+        .modal-overlay {
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            cursor:pointer;
+            background-color:rgba(43, 39, 48, 0.8);
+            z-index:1;
+        }
+    }
+    .modal-dialog {
+        position:relative;
+        width: 90%;
+        @include toRem(max-width, 660);
+        overflow-x:hidden;
+        overflow-y:auto;
+        z-index:99;
+        &.small-dialog {
+            @include toRem(max-width, 450);
+        }
+        .modal-content {
+            background:#fff; 
+            @include toRem(padding, 20);
+            @include toRem(border-radius, 30);
+            @include respond-above(sm) {
+                @include toRem(padding, 35);
+                @include toRem(border-radius, 35);
+            }
+            .modal-header {
+                @include flexbox();
+                @include justify-content($value: space-between);
+                @include align-items($value: center);
+                .modal-title {
+                    @include toRem(font-size, 20);
+                    color: #1C1C1C;
+                    font-family: 'InterMedium';
+                    font-weight: 500;
+                }
+                .modal-close {
+                    position: relative;
+                    color:var(--color-black);
+                    background-color:var(--color-bg-secondary);
+                    border-radius:50%;
+                    @include toRem(width, 36);
+                    @include toRem(height, 36);
+                    @include toRem(font-size, 20);
+                    text-align:center;
+                    -webkit-transition: all .3s ease-in-out;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        background-color:var(--color-primary); 
+                        color:var(--color-white); 
+                        cursor:pointer;
+                    }
+                }
+            }
+            .modal-body {
+                @include toRem(margin-block-start, 25);
+                .social__icons {
+                    @include flexbox();
+                    @include toRem(gap, 10);
+                    @include justify-content($value: space-between);
+                    @include flex-wrap($value: wrap);
+                    @include respond-above(sm) {
+                        @include toRem(gap, 25);
+                    }
+                    li {
+                        a {
+                            @include toRem(font-size, 13);
+                            @include toRem(line-height, 21.42);
+                            color: var(--color-link);
+                            text-align: center;
+                            @include respond-above(sm) {
+                                @include toRem(font-size, 16);
+                                @include toRem(line-height, 24.48);
+                            }
+                            .icon {
+                                @include flexbox();
+                                @include justify-content($value: center);
+                                @include align-items($value: center);
+                                @include toRem(width, 55);
+                                @include toRem(height, 55);
+                                @include toRem(border-radius, 55);
+                                background-color: var(--color-bg-secondary);
+                                @include transition(all .3s ease-in-out);
+                                @include respond-above(sm) {
+                                    @include toRem(width, 62);
+                                    @include toRem(height, 62);
+                                    @include toRem(border-radius, 62);
+                                }
+                                @include respond-above(md) {
+                                    @include toRem(width, 72);
+                                    @include toRem(height, 72);
+                                    @include toRem(border-radius, 72);
+                                }
+                            }
+                            span {
+                                @include toRem(margin-block-start, 10);
+                                display: block;
+                            }
+                            &:hover {
+                                .icon {
+                                    background-color: var(--color-primary);
+                                    svg path {
+                                        fill: var(--color-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .page-link {
+                    position: relative;
+                    @include toRem(margin-block-start, 30);
+                    .form-group {
+                        @include flexbox();
+                        @include flex-direction($value: column);
+                        label {
+                            @include toRem(margin-block-end, 10);
+                            @include toRem(font-size, 16);
+                            @include toRem(line-height, 24.48);
+                            color: var(--color-link);
+                        }
+                        .input-btn {
+                            position: relative;
+                            @include flexbox();
+                            @include align-items($value: center);
+                            input {
+                                @include toRem(height, 55);
+                                @include toRem(border-radius, 12);
+                                background-color: var(--color-bg-secondary);
+                                @include toRem(padding-inline, 18);
+                                @include toRem(font-size, 16);
+                                @include toRem(line-height, 24.48);
+                                color: #70757D;
+                                @include toRem(padding-inline-end, 45);
+                            }
+                            button {
+                                position: absolute;
+                                @include toRem(right, 20);
+                                @include flexbox();
+                                @include align-items($value: center);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

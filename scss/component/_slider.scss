@@ -1,0 +1,84 @@
+@use "../utils/" as *;
+
+//New Slider CSS
+.news {
+    &__slider {
+        &--item {
+            @include toRem(margin-inline, 10);
+            background-color: #F8F9F9;
+            @include toRem(padding-inline, 20);
+            @include toRem(padding-block, 15);
+            @include respond-above (lg) {
+                @include toRem(margin-inline, 15);
+                @include toRem(padding-inline, 30);
+                @include toRem(padding-block, 30);
+            }
+            @include respond-above (xxl) {
+                @include toRem(margin-inline, 25);
+                @include toRem(padding-inline, 45);
+                @include toRem(padding-block, 40);
+            }
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+        .slick-list {
+            @include toRem(padding-block-end, 50);
+            @include toRem(margin-inline, -10);
+            @include respond-above (lg) {
+                @include toRem(margin-inline, -15)
+            }
+            @include respond-above (xxl) {
+                @include toRem(margin-inline, -25)
+            }
+
+        }
+        .slick-dots {
+            width: 100%;
+            position: relative;
+            @include flexbox();
+            @include toRem(padding-inline, 60);
+            li {
+                flex: auto;
+                background: var(--color-smoke);
+                @include flexbox();
+                @include transition(width .3s ease-in-out);
+                &.slick-active {
+                    background: #2C2828;
+                }
+                button {
+                    width: 100%;
+                    font-size: 0;
+                    @include toRem(height, 5);
+                }
+            }
+        }
+        .slick-arrow {
+            position: absolute;
+            @include toRem(bottom, -12);
+            z-index: 1;
+            background-size: cover;
+            opacity: 0.5;
+            font-size: 0;
+            &::before {
+                content: '';
+                background: url(../../images/slider-arrow.svg) no-repeat;
+                background-size: cover;
+                width: 32px;
+                display: block;
+                height: 29px;
+            }
+            &[aria-disabled=false] {
+                opacity: 1;
+            }
+            &.slick-prev {
+                left: 0;
+                @include transform(rotate(-180deg));
+            }
+            &.slick-next {
+                right: 0;
+            }
+        }
+    }
+}

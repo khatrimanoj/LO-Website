@@ -1,0 +1,113 @@
+@use "../utils" as *;
+ footer {
+     width: 100%;
+     position: relative;
+     @include toRem(padding-block-start, 30);
+     @include respond-above(md) {
+         @include toRem(padding-block-start, 45);
+     }
+     @include respond-above(xl) {
+         @include toRem(padding-block-start, 60);
+     }
+     .flex-row {
+        position: relative;
+        @include flexbox();
+        @include toRem(gap, 40);
+        @include flex-direction($value: column);
+        @include respond-above(lg) {
+            @include flex-direction($value: row);
+        }
+        .flex-item {
+            flex: 1;
+            @include flexbox();
+            @include flex-direction($value: column);
+            @include justify-content($value: space-between);
+            @include toRem(gap, 20);
+            &:not(:first-child) {
+                flex: 1;
+                background: transparent;
+            }
+            @include respond-above (sm) {
+                flex: 2;
+                background-size: unset;
+                &:not(:first-child) {
+                    flex: 2;
+                    @include flex-direction($value: row);
+                }
+            }
+            @include respond-above (xl) {
+                flex: 2;
+                background-size: unset;
+                &:not(:first-child) {
+                    flex: 1;
+                    @include flex-direction($value: row);
+                }
+            }
+            .copy-right {
+                @include toRem(font-size, 16);
+                @include toRem(line-height, 20);
+                color: rgba(49, 45, 45, 1);
+                display: none;
+                @include respond-above(lg) {
+                    display: block;
+                }
+            }
+            .footer-menu {
+                flex: 1;
+                .footer-title {
+                    @include toRem(font-size, 18);
+                    @include toRem(line-height, 22.5);
+                    color: rgba(48, 48, 48, 1);
+                    font-family: 'InterSemiBold';
+                    @include toRem(margin-block-end, 20);
+                    @include respond-above(sm) {
+                        @include toRem(margin-block-end, 30);
+                    }
+                }
+                li {
+                    &:not(:last-child) {
+                        @include toRem(margin-block-end, 10);
+                    }
+                    &.footer-icon {
+                        @include flexbox();
+                        @include toRem(gap, 20);
+                    }
+                }
+                a {
+                    @include toRem(font-size, 16);
+                    @include toRem(line-height, 20);
+                    color: rgba(49, 45, 45, 1);
+                    font-family: 'InterRegular';
+                    @include transition(all .3s ease-in-out);
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+        .copy-right {
+            @include toRem(font-size, 16);
+            @include toRem(line-height, 20);
+            color: rgba(49, 45, 45, 1);
+            display: block;
+            @include respond-above(lg) {
+                display: none;
+            }
+        }
+     }
+     .footer-bottom {
+         background: linear-gradient(121.66deg, rgba(34, 34, 34, 0.9) 3.96%, rgba(14, 7, 7, 0.9) 104.44%);
+         @include toRem(padding-block, 30);
+         @include toRem(margin-block-start, 30);
+         @include respond-above(sm) {
+            @include toRem(padding-block, 45);
+            @include toRem(margin-block-start, 45);
+         }
+         p {
+             @include toRem(font-size, 16);
+             @include toRem(line-height, 20);
+             color: var(--color-white);
+             font-family: 'InterRegular';
+         }
+     }
+ }
