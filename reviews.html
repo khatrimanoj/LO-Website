@@ -6,6 +6,7 @@
 	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
 
+    <meta name = "format-detection" content = "telephone=no" />
     <meta http-equiv=X-UA-Compatible content="IE=edge">
 	<meta name=theme-color content="var(--primary-color)" />
 
@@ -28,10 +29,10 @@
         <header>
             <div class="container">
                 <nav role="navigation">
-                    <a class="brand-logo" href="#" tabindex="-1" aria-label="brand name" aria-labelledby="Lo website">
+                    <a class="brand-logo" href="index.html" tabindex="-1" aria-label="brand name" aria-labelledby="Lo website">
                         <img src="images/logo.png" alt="Lo website logo" />
                     </a>
-                    <a href="#" class="btn btn-primary">
+                    <a href="#modal-write-review-rating" class="btn btn-primary">
                         <span> 
                             <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.71574 3.42856L9.39337 6.5584L4.30497 12.7302L0.629257 9.60019L5.71574 3.42856ZM11.5807 2.02089L9.9406 0.625089C9.30676 0.0856609 8.36197 0.177012 7.83013 0.829147L6.51682 2.44507L10.1945 5.57493L11.7264 3.69005C12.1373 3.18437 12.0723 2.43927 11.5807 2.02089ZM0.11884 13.6048C0.0821075 13.8938 0.353891 14.1234 0.624418 14.0278L4.30497 12.7302L0.629257 9.60019L0.11884 13.6048Z" fill="white"/>
@@ -51,7 +52,7 @@
                             <div class="card">
                                 <div class="card__header">
                                     <div class="banner-avatar">
-                                        <div class="banner" style="background-image: url(images/banner-bg.jpg);"></div>
+                                        <div class="banner" style="background-image: url(images/banner-bg.png);"></div>
                                         <div class="avatar">
                                             <img src="images/client-avatar.png" alt="client avatar" />
                                         </div>
@@ -59,8 +60,17 @@
                                     <div class="rating-name">
                                         <div class="ratings">
                                             <span>5.0</span>
-                                            <div class='stars-rating' style="--rating: 5;">
-                                              <div class="rating"></div>
+                                            <div class="star-rating no-hover">
+                                                <input type="radio" disabled checked id="5-stars" name="rating" value="5" />
+                                                <label for="5-stars" class="star">&#9733;</label>
+                                                <input type="radio" disabled id="4-stars" name="rating" value="4" />
+                                                <label for="4-stars" class="star">&#9733;</label>
+                                                <input type="radio" disabled id="3-stars" name="rating" value="3" />
+                                                <label for="3-stars" class="star">&#9733;</label>
+                                                <input type="radio" disabled id="2-stars" name="rating" value="2" />
+                                                <label for="2-stars" class="star">&#9733;</label>
+                                                <input type="radio" disabled id="1-star" name="rating" value="1" />
+                                                <label for="1-star" class="star">&#9733;</label>
                                             </div>
                                         </div>
                                         <div class="name">
@@ -125,15 +135,24 @@
                         </aside>
                     </div>
                     <div class="content__wrapper">
-                        <article>
+                        <article class="common-card">
                             <div class="card">
                                 <div class="card__header">
                                     <div class="rating-time">
                                         <div class="ratings">
                                           <span>5.0</span>
-                                          <div class='stars-rating' style="--rating: 5;">
-                                            <div class="rating"></div>
-                                          </div>
+                                          <div class="star-rating no-hover">
+                                            <input type="radio" checked disabled id="5-stars" name="rating1" value="5" />
+                                            <label for="5-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="4-stars" name="rating1" value="4" />
+                                            <label for="4-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="3-stars" name="rating1" value="3" />
+                                            <label for="3-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="2-stars" name="rating1" value="2" />
+                                            <label for="2-stars" class="star">&#9733;</label>
+                                            <input type="radio" id="1-star" name="rating1" value="1" />
+                                            <label for="1-star" class="star">&#9733;</label>
+                                        </div>
                                         </div>
                                         <span class="time">December 1st, 2021 04:31 AM</span>
                                     </div>
@@ -165,15 +184,24 @@
                                 </div>
                             </div>
                         </article>
-                        <article>
+                        <article class="common-card">
                             <div class="card">
                                 <div class="card__header">
                                     <div class="rating-time">
                                         <div class="ratings">
                                           <span>4.0</span>
-                                          <div class='stars-rating' style="--rating: 4;">
-                                            <div class="rating"></div>
-                                          </div>
+                                          <div class="star-rating no-hover">
+                                            <input type="radio" disabled id="5-stars" name="rating2" value="5" />
+                                            <label for="5-stars" class="star">&#9733;</label>
+                                            <input type="radio" disabled checked id="4-stars" name="rating2" value="4" />
+                                            <label for="4-stars" class="star">&#9733;</label>
+                                            <input type="radio" disabled id="3-stars" name="rating2" value="3" />
+                                            <label for="3-stars" class="star">&#9733;</label>
+                                            <input type="radio" disabled id="2-stars" name="rating2" value="2" />
+                                            <label for="2-stars" class="star">&#9733;</label>
+                                            <input type="radio" disabled id="1-star" name="rating2" value="1" />
+                                            <label for="1-star" class="star">&#9733;</label>
+                                            </div>
                                         </div>
                                         <span class="time">December 1st, 2021 04:31 AM</span>
                                     </div>
@@ -205,135 +233,24 @@
                                 </div>
                             </div>
                         </article>
-                        <article>
+                        <article class="common-card">
                             <div class="card">
                                 <div class="card__header">
                                     <div class="rating-time">
                                         <div class="ratings">
                                           <span>5.0</span>
-                                          <div class='stars-rating' style="--rating: 5;">
-                                            <div class="rating"></div>
-                                          </div>
-                                        </div>
-                                        <span class="time">December 1st, 2021 04:31 AM</span>
-                                    </div>
-                                </div>
-                                <div class="card__body">
-                                    <p class="text">
-                                        We tried going through banks and another financing company before being recommended to Candace. The communication and progress were terrible and/or the loans did not work for us. Movement Mortgage made the process a lot easier and user friendly.</p>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="card__footer">
-                                    <div class="avatar-button">
-                                        <div class="client-info">
-                                            <div class="avatar">
-                                                <img src="images/35.png" alt="client avatar" />
+                                            <div class="star-rating no-hover">
+                                                <input type="radio" checked disabled id="5-stars" name="rating3" value="5" />
+                                                <label for="5-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="4-stars" name="rating3" value="4" />
+                                                <label for="4-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="3-stars" name="rating3" value="3" />
+                                                <label for="3-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="2-stars" name="rating3" value="2" />
+                                                <label for="2-stars" class="star">&#9733;</label>
+                                                <input type="radio" id="1-star" name="rating3" value="1" />
+                                                <label for="1-star" class="star">&#9733;</label>
                                             </div>
-                                            <div class="name">
-                                                <div class="title">Roger M</div>
-                                                <span>Clover - SC</span>
-                                            </div>
-                                        </div>
-                                        <div class="button">
-                                            <a href="#modal-share" class="btn-share modal-toggle">
-                                                <span class="icon">
-                                                    <img src="images/share-icon.svg" alt="share icon" />
-                                                </span>Share
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <div class="card">
-                                <div class="card__header">
-                                    <div class="rating-time">
-                                        <div class="ratings">
-                                          <span>5.0</span>
-                                          <div class='stars-rating' style="--rating: 5;">
-                                            <div class="rating"></div>
-                                          </div>
-                                        </div>
-                                        <span class="time">December 1st, 2021 04:31 AM</span>
-                                    </div>
-                                </div>
-                                <div class="card__body">
-                                    <p class="text">
-                                        Candace was amazing from start to finish. She was able to successfully do a 21 day close which is unheard of at the banks. Candace always kept me in the loop and clearly communicated what was needed from me and why. She presented multiple options to me and Candace was amazing from start to finish. She was able to successfully do a 21 day close which is unheard of at the banks. Candace always kept me in the loop and clearly communicated what was needed from me and why. She presented multiple options to me and</p>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="card__footer">
-                                    <div class="avatar-button">
-                                        <div class="client-info">
-                                            <div class="avatar">
-                                                <img src="images/11.png" alt="client avatar" />
-                                            </div>
-                                            <div class="name">
-                                                <div class="title">Paul L</div>
-                                                <span>Charlotte - NC</span>
-                                            </div>
-                                        </div>
-                                        <div class="button">
-                                            <a href="#modal-share" class="btn-share modal-toggle">
-                                                <span class="icon">
-                                                    <img src="images/share-icon.svg" alt="share icon" />
-                                                </span>Share
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <div class="card">
-                                <div class="card__header">
-                                    <div class="rating-time">
-                                        <div class="ratings">
-                                          <span>4.0</span>
-                                          <div class='stars-rating' style="--rating: 4;">
-                                            <div class="rating"></div>
-                                          </div>
-                                        </div>
-                                        <span class="time">December 1st, 2021 04:31 AM</span>
-                                    </div>
-                                </div>
-                                <div class="card__body">
-                                    <p class="text">
-                                        Candace was very helpful throughout the whole process. She was able to explain everything in a clear and easy manner.</p>
-                                </div>
-                                <div class="divider"></div>
-                                <div class="card__footer">
-                                    <div class="avatar-button">
-                                        <div class="client-info">
-                                            <div class="avatar">
-                                                <span>LB</span>
-                                            </div>
-                                            <div class="name">
-                                                <div class="title">Lisa B</div>
-                                                <span>Rock Hill - SC</span>
-                                            </div>
-                                        </div>
-                                        <div class="button">
-                                            <a href="#modal-share" class="btn-share modal-toggle">
-                                                <span class="icon">
-                                                    <img src="images/share-icon.svg" alt="share icon" />
-                                                </span>Share
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <div class="card">
-                                <div class="card__header">
-                                    <div class="rating-time">
-                                        <div class="ratings">
-                                          <span>5.0</span>
-                                          <div class='stars-rating' style="--rating: 5;">
-                                            <div class="rating"></div>
-                                          </div>
                                         </div>
                                         <span class="time">December 1st, 2021 04:31 AM</span>
                                     </div>
@@ -374,7 +291,7 @@
     <!-- Share Modal Start -->
     <div data-modal="data-ml-modal" id="modal-share">
         <a href="#!" class="modal-overlay"></a>
-        <div class="modal-dialog small-dialog">
+        <div class="modal-dialog sm-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title">Share</h2>
@@ -443,6 +360,309 @@
     </div>
     <!-- Share Modal End -->
 
+    <!-- Read More Review Modal Start -->
+    <div data-modal="data-ml-modal" id="modal-more-review">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-dialog lg-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="client-profile">
+                        <div class="banner-avatar">
+                            <div class="banner" style="background-image: url(images/banner-bg.png);"></div>
+                            <div class="avatar">
+                                <img src="images/client-avatar.png" alt="client avatar" />
+                            </div>
+                        </div>
+                        <div class="rating-name-social">
+                            <div class="rating-name">
+                                <div class="ratings">
+                                    <span>5.0</span>
+                                    <div class="star-rating no-hover">
+                                        <input type="radio" checked id="5-stars" name="rating4" value="5" />
+                                        <label for="5-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="4-stars" name="rating4" value="4" />
+                                        <label for="4-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="3-stars" name="rating4" value="3" />
+                                        <label for="3-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="2-stars" name="rating4" value="2" />
+                                        <label for="2-stars" class="star">&#9733;</label>
+                                        <input type="radio" id="1-star" name="rating4" value="1" />
+                                        <label for="1-star" class="star">&#9733;</label>
+                                    </div>
+                                </div>
+                                <div class="name">
+                                    <div class="title">Candace McComsey</div>
+                                    <span>Senior Loan Originator</span>
+                                </div>
+                            </div>                            
+                            <ul class="social__icons">
+                                <li>
+                                    <a href="#">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.54073 15.7508H0.261282V5.23557H3.54073V15.7508ZM1.89924 3.8012C0.85058 3.8012 0 2.93635 0 1.89221C7.50586e-09 1.39068 0.200098 0.909678 0.556275 0.555037C0.912451 0.200395 1.39553 0.00115967 1.89924 0.00115967C2.40295 0.00115967 2.88603 0.200395 3.24221 0.555037C3.59838 0.909678 3.79848 1.39068 3.79848 1.89221C3.79848 2.93635 2.94755 3.8012 1.89924 3.8012ZM15.8146 15.7508H12.5423V10.6321C12.5423 9.41213 12.5175 7.84768 10.8372 7.84768C9.13217 7.84768 8.87089 9.17307 8.87089 10.5442V15.7508H5.59497V5.23557H8.74025V6.66995H8.78615C9.22398 5.84378 10.2935 4.9719 11.8891 4.9719C15.208 4.9719 15.8182 7.14807 15.8182 9.97464V15.7508H15.8146Z" fill="#3A3E47"/>
+                                        </svg>                                            
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.37329 10.3692L9.84598 7.32113H6.89052V5.34317C6.89052 4.50929 7.30337 3.69646 8.62703 3.69646H9.97063V1.1014C9.97063 1.1014 8.75135 0.895477 7.58559 0.895477C5.15168 0.895477 3.56077 2.35535 3.56077 4.99811V7.32113H0.855286V10.3692H3.56077V17.7376H6.89052V10.3692H9.37329Z" fill="#3A3E47"/>
+                                        </svg>                                            
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.49785 5.8322C7.02888 5.8322 5.8301 7.03101 5.8301 8.5C5.8301 9.96899 7.02888 11.1678 8.49785 11.1678C9.96681 11.1678 11.1656 9.96899 11.1656 8.5C11.1656 7.03101 9.96681 5.8322 8.49785 5.8322ZM16.4991 8.5C16.4991 7.39525 16.5091 6.30051 16.4471 5.19777C16.385 3.9169 16.0928 2.78014 15.1562 1.8435C14.2176 0.904868 13.0829 0.614672 11.802 0.55263C10.6973 0.490589 9.60258 0.500595 8.49985 0.500595C7.39512 0.500595 6.30041 0.490589 5.19768 0.55263C3.91684 0.614672 2.78009 0.90687 1.84348 1.8435C0.904861 2.78214 0.61467 3.9169 0.552629 5.19777C0.490589 6.30252 0.500595 7.39725 0.500595 8.5C0.500595 9.60275 0.490589 10.6995 0.552629 11.8022C0.61467 13.0831 0.906862 14.2199 1.84348 15.1565C2.78209 16.0951 3.91684 16.3853 5.19768 16.4474C6.30241 16.5094 7.39713 16.4994 8.49985 16.4994C9.60458 16.4994 10.6993 16.5094 11.802 16.4474C13.0829 16.3853 14.2196 16.0931 15.1562 15.1565C16.0948 14.2179 16.385 13.0831 16.4471 11.8022C16.5111 10.6995 16.4991 9.60475 16.4991 8.5ZM8.49785 12.6048C6.22636 12.6048 4.39315 10.7715 4.39315 8.5C4.39315 6.22847 6.22636 4.39523 8.49785 4.39523C10.7693 4.39523 12.6025 6.22847 12.6025 8.5C12.6025 10.7715 10.7693 12.6048 8.49785 12.6048ZM12.7707 5.18576C12.2403 5.18576 11.812 4.75747 11.812 4.22711C11.812 3.69675 12.2403 3.26847 12.7707 3.26847C13.301 3.26847 13.7293 3.69675 13.7293 4.22711C13.7294 4.35305 13.7048 4.47778 13.6566 4.59416C13.6085 4.71054 13.5379 4.81628 13.4489 4.90533C13.3598 4.99438 13.2541 5.06499 13.1377 5.11311C13.0213 5.16123 12.8966 5.18592 12.7707 5.18576Z" fill="#3A3E47"/>
+                                        </svg>                                             
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#!" class="modal-close">&times;</a>
+                </div>
+                <div class="divider"></div>
+                <div class="modal-body common-card">
+                    <div class="card">
+                        <div class="card__header">
+                            <div class="rating-time">
+                                <div class="ratings">
+                                  <span>5.0</span>
+                                  <div class="star-rating no-hover">
+                                    <input type="radio" checked id="5-stars" name="rating5" value="5" />
+                                    <label for="5-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="4-stars" name="rating5" value="4" />
+                                    <label for="4-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="3-stars" name="rating5" value="3" />
+                                    <label for="3-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="2-stars" name="rating5" value="2" />
+                                    <label for="2-stars" class="star">&#9733;</label>
+                                    <input type="radio" id="1-star" name="rating5" value="1" />
+                                    <label for="1-star" class="star">&#9733;</label>
+                                </div>
+                                </div>
+                                <span class="time">December 1st, 2021 04:31 AM</span>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <p class="text">
+                                We tried going through banks and another financing company before being recommended to Candace. The communication and progress were terrible and/or the loans did not work for us. Movement Mortgage made the process a lot easier and user friendly.</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="card__footer">
+                            <div class="avatar-button">
+                                <div class="client-info">
+                                    <div class="avatar">
+                                        <img src="images/35.png" alt="client avatar" />
+                                    </div>
+                                    <div class="name">
+                                        <div class="title">Roger M</div>
+                                        <span>Clover - SC</span>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="#modal-share" class="btn-share modal-toggle">
+                                        <span class="icon">
+                                            <img src="images/share-icon.svg" alt="share icon" />
+                                        </span>Share
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Read More Review Modal End -->
+
+    <!-- Write Review Modal Start -->
+    <div data-modal="data-ml-modal" id="modal-write-review">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-dialog md-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Write a review for</h2>
+                    <a href="#!" class="modal-close">&times;</a>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="form__content">
+                            <div class="client-info">
+                                <div class="avatar">
+                                    <img src="images/client-avatar.png" alt="client image" />
+                                </div>
+                                <div class="name">
+                                    <div class="title">Candace McComsey</div>
+                                    <span>Senior Loan Originator</span>
+                                </div>
+                            </div>
+                            <div class="form__content--item">
+                                <div class="flex-group">
+                                    <div class="form-group">
+                                        <label>Fist Name <span>*</span></label>
+                                        <input type="text" class="form-control" placeholder="Fist Name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name <span>*</span></label>
+                                        <input type="text" class="form-control" placeholder="Last Name" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Email <span>*</span></label>
+                                        <input type="email" class="form-control" placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input type="tel" class="form-control" placeholder="Phone" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary"><span>Continue</span></button>
+                                </div>
+                                <div class="divider-or">
+                                    <span>or</span>
+                                </div>
+                                <ul class="social-button">
+                                    <li>
+                                        <a href="#" class="btn btn-outline">
+                                            <div class="icon">
+                                                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18.8703 9.45905H18.1733V9.42314H10.3848V12.8847H15.2755C14.562 14.8997 12.6448 16.3462 10.3848 16.3462C7.51735 16.3462 5.1925 14.0214 5.1925 11.1539C5.1925 8.28646 7.51735 5.9616 10.3848 5.9616C11.7084 5.9616 12.9126 6.46093 13.8295 7.27655L16.2772 4.82881C14.7316 3.38838 12.6642 2.50006 10.3848 2.50006C5.60572 2.50006 1.73096 6.37482 1.73096 11.1539C1.73096 15.933 5.60572 19.8078 10.3848 19.8078C15.1639 19.8078 19.0386 15.933 19.0386 11.1539C19.0386 10.5737 18.9789 10.0073 18.8703 9.45905Z" fill="#FFC107"/>
+                                                    <path d="M2.72852 7.12597L5.57174 9.21112C6.34106 7.30641 8.20424 5.9616 10.3846 5.9616C11.7082 5.9616 12.9124 6.46093 13.8292 7.27655L16.277 4.82881C14.7314 3.38838 12.664 2.50006 10.3846 2.50006C7.06063 2.50006 4.17803 4.37665 2.72852 7.12597Z" fill="#FF3D00"/>
+                                                    <path d="M10.3847 19.8078C12.62 19.8078 14.6511 18.9523 16.1867 17.5612L13.5084 15.2948C12.6103 15.9777 11.513 16.3471 10.3847 16.3462C8.13388 16.3462 6.22268 14.911 5.50268 12.9081L2.68066 15.0823C4.11288 17.8849 7.02143 19.8078 10.3847 19.8078Z" fill="#4CAF50"/>
+                                                    <path d="M18.8703 9.45906H18.1732V9.42314H10.3848V12.8847H15.2755C14.9342 13.8437 14.3194 14.6817 13.5071 15.2952L13.5084 15.2943L16.1867 17.5608C15.9972 17.733 19.0386 15.4808 19.0386 11.1539C19.0386 10.5737 18.9789 10.0073 18.8703 9.45906Z" fill="#1976D2"/>
+                                                </svg>                                                    
+                                            </div>
+                                            <span>Continue with Google</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn btn-outline">
+                                            <div class="icon">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 0.5V15.5C0 15.6326 0.0526784 15.7598 0.146447 15.8536C0.240215 15.9473 0.367392 16 0.5 16H8.546V9.8035H6.4615V7.3895H8.5465V5.6115C8.5465 3.8865 9.5525 2.587 11.151 2.4265C11.9414 2.40148 12.7326 2.43088 13.519 2.5145V4.6745H12.2365C11.7285 4.6745 11.044 4.8865 11.044 5.44C11.044 5.884 11.04 7.3555 11.04 7.39H13.431L13.12 9.805H11.04V16H15.5C15.6326 16 15.7598 15.9473 15.8536 15.8536C15.9473 15.7598 16 15.6326 16 15.5V0.5C16 0.367392 15.9473 0.240215 15.8536 0.146447C15.7598 0.0526784 15.6326 0 15.5 0H0.5C0.367392 0 0.240215 0.0526784 0.146447 0.146447C0.0526784 0.240215 0 0.367392 0 0.5Z" fill="#3B5998"/>
+                                                </svg>                                                                                                       
+                                            </div>
+                                            <span>Continue with Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn btn-outline">
+                                            <div class="icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.11133 18.3333V1.66667C1.11133 1.51933 1.16986 1.37802 1.27405 1.27383C1.37823 1.16965 1.51954 1.11111 1.66688 1.11111H18.3336C18.4809 1.11111 18.6222 1.16965 18.7264 1.27383C18.8306 1.37802 18.8891 1.51933 18.8891 1.66667V18.3333C18.8891 18.4807 18.8306 18.622 18.7264 18.7262C18.6222 18.8304 18.4809 18.8889 18.3336 18.8889H13.378H10.6069H1.66688C1.51954 18.8889 1.37823 18.8304 1.27405 18.7262C1.16986 18.622 1.11133 18.4807 1.11133 18.3333Z" fill="#0A66C2"/>
+                                                    <path d="M6.93173 14.8889H4.62807V8.21246H6.93173V14.8889ZM5.77851 7.30174C5.04198 7.30174 4.44434 6.75246 4.44434 6.0896C4.44434 5.77115 4.5849 5.46574 4.83511 5.24057C5.08531 5.01539 5.42467 4.88889 5.77851 4.88889C6.13236 4.88889 6.47171 5.01539 6.72191 5.24057C6.97212 5.46574 7.11269 5.77115 7.11269 6.0896C7.11269 6.75246 6.51504 7.30174 5.77851 7.30174ZM15.5535 14.8889H13.255V11.6389C13.255 10.8642 13.2375 9.87103 12.0573 9.87103C10.8596 9.87103 10.6759 10.7125 10.6759 11.5832V14.8889H8.37463V8.21246H10.5838V9.12317H10.616C10.9235 8.59853 11.6748 8.04496 12.7954 8.04496C15.1269 8.04496 15.5554 9.42674 15.5554 11.2214V14.8889H15.5535Z" fill="white"/>
+                                                </svg>                                                                                                                                                          
+                                            </div>
+                                            <span>Continue with LinkedIn</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Write Review Modal End -->
+
+    <!-- Write Review With Rating Star Modal Start -->
+    <div data-modal="data-ml-modal" id="modal-write-review-rating">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-dialog md-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Write a review for</h2>
+                    <a href="#!" class="modal-close">&times;</a>
+                </div>
+                <div class="modal-body">
+                    <div class="form">
+                        <div class="form__content">
+                            <div class="client-info">
+                                <div class="avatar">
+                                    <img src="images/client-avatar.png" alt="client image" />
+                                </div>
+                                <div class="name">
+                                    <div class="title">Candace McComsey</div>
+                                    <span>Senior Loan Originator</span>
+                                </div>
+                            </div>
+                            <div class="form__content--item">
+                                <div class="form-group">
+                                    <label>Click the stars to rate <span>*</span></label>
+                                    <div class="input-group">
+                                        <div class="star-rating">
+                                            <input type="radio" id="5-review" name="review" value="5" />
+                                            <label for="5-review" class="star">&#9733;</label>
+                                            <input type="radio" id="4-review" name="review" value="4" />
+                                            <label for="4-review" class="star">&#9733;</label>
+                                            <input type="radio" id="3-review" name="review" value="3" />
+                                            <label for="3-review" class="star">&#9733;</label>
+                                            <input type="radio" id="2-review" name="review" value="2" />
+                                            <label for="2-review" class="star">&#9733;</label>
+                                            <input type="radio" id="1-review" name="review" value="1" />
+                                            <label for="1-review" class="star">&#9733;</label>
+                                        </div>
+                                        <div class="postfix">Excellent</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Zip Code <span>*</span></label>
+                                        <input type="text" class="form-control" placeholder="Zip Code" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Review <span>*</span></label>
+                                        <textarea class="form-control textarea" placeholder="Enter your review here"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="verify">
+                                        <label for="verify">I verify that I have done business with <strong>{Loan Officer Name}</strong>.</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary"><span>Send review</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Write Review With Rating Star Modal End -->
+
+    <!-- Successfull Review Modal Start -->
+    <div data-modal="data-ml-modal" id="modal-successfull-review">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-dialog sm-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="images/thumb-icon.svg" alt="thumb icon" />
+                    <h2 class="modal-title">Your review has been
+                        received successfully!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>We're sending a confirmation link to <strong>{email address provided}</strong>. Please check your email inbox.</p>
+                    <div class="button">
+                        <button type="button" class="btn btn-primary"><span>Back to reviews page</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Successfull Review Modal End -->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
@@ -452,26 +672,17 @@
             var paragraph = $(".text")
             paragraph.each(function() {
                 var text = $(this).text();
-                var wholeText = text.slice(0, visibleCharacters) + "<span class='ellipsis'>... </span><a href='#' class='more link'>Read More</a>" + "<span style='display:none'>" + text.slice(visibleCharacters, text.length) + "<a href='#' class='less link'>Read Less</a></span>"
+                var wholeText = text.slice(0, visibleCharacters) + "<span class='ellipsis'>... </span><a href='#modal-more-review' class='more link modal-toggle'>Read More</a>" + "<span style='display:none'>" + text.slice(visibleCharacters, text.length);
                 
                 if (text.length < visibleCharacters) {
                     return
                 } else {
                     $(this).html(wholeText)
                 }
-            });
-            $(".more").on('click',function(e) {
-                e.preventDefault();
-                $(this).hide().prev().hide();
-                $(this).next().show();
-            });
-            $(".less").on('click',function(e) {
-                e.preventDefault();
-                $(this).parent().hide().prev().show().prev().show();
-            });
+            }); 
         };
 
-        moreLess(300);
+        moreLess(297);
     </script>
 </body>
 </html>

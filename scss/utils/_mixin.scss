@@ -121,6 +121,7 @@
     transition: $transition;
 }
 
+// custom scroll bar mixin
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  0%)) {
     // For Google Chrome
     &::-webkit-scrollbar {

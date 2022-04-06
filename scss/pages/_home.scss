@@ -585,6 +585,7 @@ section {
                 .ratings {
                     @extend .rating-time;
                     @include flex-direction($value: row);
+                    @include align-items($value: center);
                     @include toRem(column-gap, 10);
                     span {
                         @include toRem(font-size, 20);

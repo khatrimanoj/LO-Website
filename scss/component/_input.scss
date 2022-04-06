@@ -26,6 +26,12 @@
             @include toRem(padding-inline, 20); 
         }
     }
+    &.textarea {
+        @include toRem(height, 90);
+        @include toRem(padding-inline, 18);
+        @include toRem(padding-block-start, 10);
+        resize: none;
+    }
 }
 
 .form-select {
@@ -46,4 +52,62 @@
         @include toRem(height, 60);
         @include toRem(font-size, 18);
     }
+}
+
+
+.checkbox {
+	input {
+		padding: 0;
+		height: initial;
+		width: initial;
+		margin-bottom: 0;
+		display: none;
+		cursor: pointer;
+		&:checked {
+			+ {
+				label {
+                    &::before {
+                        background-color: var(--color-primary);
+                    }
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						@include toRem(top, 5);
+                        @include toRem(left, 6.5);
+                        @include toRem(width, 5.1);
+                        @include toRem(height, 9);
+						border: solid var(--color-white);
+						border-width: 0 2px 2px 0;
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
+	}
+	label {
+		position: relative;
+		cursor: pointer;
+		display: flex;
+		align-items: flex-start;
+        strong {
+            display: contents;
+            @include toRem(margin-inline-start, 4);
+        }
+		&:before {
+			content: '';
+			-webkit-appearance: none;
+			background-color: transparent;
+			border: 1px solid rgba(0, 0, 0, 0.19);
+			@include toRem(min-width, 18);
+			@include toRem(min-height, 18);
+            @include toRem(border-radius, 4);
+            @include toRem(margin-inline-end, 12);
+            @include toRem(margin-block-start, 2);
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+	}
 }
